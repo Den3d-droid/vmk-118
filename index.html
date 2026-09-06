@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Расписание · ВМК МГУ · 118 группа</title>
+<meta name="theme-color" content="#4f6af0">
+<link rel="manifest" href='data:application/manifest+json,{"name":"Расписание ВМК 118","short_name":"ВМК 118","display":"standalone","background_color":"%23f4f5f8","theme_color":"%234f6af0","start_url":"./"}'>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23505ac8'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><rect width='64' height='64' rx='15' fill='url(%23g)'/><g transform='rotate(-7 32 34)'><rect x='13' y='17' width='38' height='37' rx='7' fill='white'/><path d='M40 17h4a7 7 0 0 1 7 7v4z' fill='%23dfe3f5'/><text x='31' y='43' font-family='Arial,Helvetica,sans-serif' font-size='18' font-weight='900' fill='%23333a5f' text-anchor='middle' letter-spacing='-1'>118</text><circle cx='20' cy='25' r='2.2' fill='%23f59e0b'/><circle cx='42' cy='25' r='2.2' fill='%23f59e0b'/></g><path d='M50 8l1.6 3.4 3.4 1.6-3.4 1.6L50 18l-1.6-3.4L45 13l3.4-1.6z' fill='%23ffd166'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23505ac8'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><rect width='64' height='64' rx='15' fill='url(%23g)'/><g transform='rotate(-7 32 34)'><rect x='13' y='17' width='38' height='37' rx='7' fill='white'/><path d='M40 17h4a7 7 0 0 1 7 7v4z' fill='%23dfe3f5'/><text x='31' y='43' font-family='Arial,Helvetica,sans-serif' font-size='18' font-weight='900' fill='%23333a5f' text-anchor='middle' letter-spacing='-1'>118</text><circle cx='20' cy='25' r='2.2' fill='%23f59e0b'/><circle cx='42' cy='25' r='2.2' fill='%23f59e0b'/></g><path d='M50 8l1.6 3.4 3.4 1.6-3.4 1.6L50 18l-1.6-3.4L45 13l3.4-1.6z' fill='%23ffd166'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f4f5f8; --surface:#ffffff; --surface2:#eef0f4;
+  --text:#181b22; --text2:#6a7180; --border:#e4e7ec;
+  --accent:#4f6af0; --accent-soft:rgba(79,106,240,.12);
+  --ok:#22a06b; --danger:#dc3d43; --hw:#f59e0b;
+  --topbar:rgba(255,255,255,.42);
+  --topbtn:rgba(255,255,255,.5);
+  --topshine:rgba(255,255,255,.65);
+  --topbord:rgba(255,255,255,.6);
+  --shadow:0 1px 2px rgba(18,25,40,.05),0 10px 28px -14px rgba(18,25,40,.18);
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0e1014; --surface:#161a21; --surface2:#1d222c;
+  --text:#eceef3; --text2:#98a0ad; --border:#262c37;
+  --accent:#7d8dff; --accent-soft:rgba(125,141,255,.16);
+  --ok:#34c98a; --danger:#f2777c; --hw:#fbbf24;
+  --topbar:rgba(14,17,23,.42);
+  --topbtn:rgba(32,38,48,.5);
+  --topshine:rgba(255,255,255,.09);
+  --topbord:rgba(255,255,255,.1);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px -14px rgba(0,0,0,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background .3s,color .3s}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+
+.topbar{position:sticky;top:0;z-index:50;background:var(--topbar);backdrop-filter:blur(32px) saturate(200%);-webkit-backdrop-filter:blur(32px) saturate(200%);border-bottom:1px solid var(--topbord);box-shadow:inset 0 1px 0 var(--topshine)}
+.topbar-in{display:flex;align-items:center;gap:10px;height:64px}
+.logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#4f6af0,#7a5cf0);color:#fff;display:grid;place-items:center;font-weight:800;font-size:12.5px;flex-shrink:0}
+.brand-t b{display:block;font-size:15px;font-weight:700;line-height:1.2}
+.brand-t span{font-size:12px;color:var(--text2)}
+.spacer{flex:1}
+.clockbox{display:flex;align-items:baseline;gap:7px;font-size:12px;font-weight:600;color:var(--text2);white-space:nowrap}
+.clockbox .ct{color:var(--text);font-size:14.5px;font-variant-numeric:tabular-nums}
+.hbtn{display:flex;flex-direction:column;align-items:center;gap:2px;flex-shrink:0}
+.blabel{font-size:9px;font-weight:600;color:var(--text2);opacity:.75;line-height:1;letter-spacing:.02em;user-select:none}
+.iconbtn{width:40px;height:40px;border-radius:12px;border:1px solid var(--topbord);background:var(--topbtn);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:.18s;flex-shrink:0;backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);box-shadow:inset 0 1px 0 var(--topshine)}
+.iconbtn:hover{background:var(--surface2)}
+.iconbtn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.iconbtn.sm{width:34px;height:34px;border-radius:10px}
+/* кнопка-флажок синхронизации */
+.syncbtn{position:relative}
+.syncbtn .flag{position:absolute;top:-4px;right:-4px;width:14px;height:14px;border-radius:50%;border:2px solid var(--surface);background:#9aa2b1;transition:background .2s}
+.syncbtn.on .flag{background:var(--ok)}
+.syncbtn.off .flag{background:#9aa2b1}
+@media(max-width:680px){.brand-t span{display:none}}
+@media(max-width:768px){
+  .topbar{backdrop-filter:blur(40px) saturate(230%);-webkit-backdrop-filter:blur(40px) saturate(230%)}
+  .iconbtn{backdrop-filter:blur(26px) saturate(220%);-webkit-backdrop-filter:blur(26px) saturate(220%)}
+}
+
+.semester{text-align:center;color:var(--text2);font-size:12.5px;font-weight:500;margin-top:18px}
+.weekbar{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 0 14px}
+.wlabel{border:1px solid var(--border);background:var(--surface);color:var(--text);font-weight:700;font-size:14.5px;padding:10px 16px;border-radius:12px;min-width:200px;text-align:center;cursor:pointer;box-shadow:var(--shadow);transition:.18s;font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center;gap:8px}
+.wlabel:hover{border-color:var(--accent)}
+.wlabel .ic{opacity:.55}
+.arrow{width:42px;height:42px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:grid;place-items:center;transition:.18s;flex-shrink:0}
+.arrow:hover{background:var(--surface2);border-color:var(--accent);color:var(--accent)}
+.arrow.sm{width:38px;height:40px}
+.wtoday{border:none;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:13px;padding:9px 14px;border-radius:12px;cursor:pointer;transition:.15s}
+.wtoday:hover{filter:brightness(1.05)}
+
+.daynav{display:flex;align-items:center;gap:8px;margin:0 0 16px}
+.tabs{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none;background:var(--topbtn);border:1px solid var(--topbord);border-radius:14px;padding:4px;box-shadow:inset 0 1px 0 var(--topshine);backdrop-filter:blur(24px) saturate(200%);-webkit-backdrop-filter:blur(24px) saturate(200%);touch-action:pan-y;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.tab{position:relative;flex:1;min-width:46px;display:flex;flex-direction:column;align-items:center;gap:1px;border:0;background:transparent;color:var(--text2);padding:8px 4px 7px;border-radius:10px;cursor:pointer;transition:background .15s,color .15s;line-height:1.15;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.tab:hover{color:var(--text);background:var(--surface2)}
+.tab.hint{background:var(--accent-soft);color:var(--accent)}
+.tab .tn{font-weight:700;font-size:13px;white-space:nowrap}
+.tab .td{font-size:11px;font-weight:600;opacity:.7;font-variant-numeric:tabular-nums}
+.tab.today .tn{color:var(--accent)}
+.tab.active{background:var(--accent);color:#fff;box-shadow:0 4px 12px -4px var(--accent)}
+.tab.active .tn,.tab.active .td{color:#fff;opacity:1}
+.tab .hw-dot{position:absolute;top:6px;right:8px;width:6px;height:6px;border-radius:50%;background:var(--hw)}
+@media(max-width:560px){
+  .tab{min-width:0;flex:1;padding:7px 2px 6px}
+  .tab .tn{font-size:11.5px}
+  .tab .td{font-size:9.5px}
+}
+#dayView{will-change:transform}
+
+.day-head{display:flex;align-items:baseline;gap:10px;margin:4px 2px 14px;flex-wrap:wrap}
+.day-head h1{font-size:26px;font-weight:800;letter-spacing:-.02em}
+.day-date{font-size:16px;font-weight:600;color:var(--text2);font-variant-numeric:tabular-nums}
+.day-meta{color:var(--text2);font-size:13.5px;font-weight:500}
+.chip{background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px}
+.hint{display:flex;align-items:flex-start;gap:9px;background:var(--accent-soft);color:var(--accent);border-radius:12px;padding:10px 14px;font-size:13.5px;font-weight:500;margin-bottom:12px}
+.hint .ic{flex-shrink:0;margin-top:1px}
+
+.banner{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 18px;box-shadow:var(--shadow);margin-bottom:12px}
+.banner .b-ic{font-size:30px;line-height:1}
+.banner b{display:block;font-size:16.5px;margin-bottom:3px}
+.banner p{color:var(--text2);font-size:13.5px;line-height:1.5}
+.banner.vac{border-color:rgba(245,158,11,.45)}
+.banner.kd{border-color:rgba(139,92,246,.45)}
+.banner.off{border-color:rgba(34,160,107,.45)}
+
+.anim-r{animation:slideR .3s cubic-bezier(.22,.8,.36,1)}
+.anim-l{animation:slideL .3s cubic-bezier(.22,.8,.36,1)}
+@keyframes slideR{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:none}}
+@keyframes slideL{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
+
+.t-lec {--tag:#6366f1;--tagbg:rgba(99,102,241,.13); --tagb:rgba(99,102,241,.3)}
+.t-sem {--tag:#0d9488;--tagbg:rgba(13,148,136,.13); --tagb:rgba(13,148,136,.3)}
+.t-prac{--tag:#2563eb;--tagbg:rgba(37,99,235,.13);  --tagb:rgba(37,99,235,.3)}
+.t-pe  {--tag:#d97706;--tagbg:rgba(217,119,6,.15);  --tagb:rgba(217,119,6,.3)}
+.t-con {--tag:#db2777;--tagbg:rgba(219,39,119,.12); --tagb:rgba(219,39,119,.3)}
+.t-oth {--tag:#64748b;--tagbg:rgba(100,116,139,.13);--tagb:rgba(100,116,139,.3)}
+[data-theme="dark"] .t-lec {--tag:#8b93ff;--tagbg:rgba(139,147,255,.18);--tagb:rgba(139,147,255,.35)}
+[data-theme="dark"] .t-sem {--tag:#2dd4bf;--tagbg:rgba(45,212,191,.16); --tagb:rgba(45,212,191,.35)}
+[data-theme="dark"] .t-prac{--tag:#60a5fa;--tagbg:rgba(96,165,250,.16); --tagb:rgba(96,165,250,.35)}
+[data-theme="dark"] .t-pe  {--tag:#fbbf24;--tagbg:rgba(251,191,36,.15); --tagb:rgba(251,191,36,.35)}
+[data-theme="dark"] .t-con {--tag:#f472b6;--tagbg:rgba(244,114,182,.16);--tagb:rgba(244,114,182,.35)}
+[data-theme="dark"] .t-oth {--tag:#94a3b8;--tagbg:rgba(148,163,184,.16);--tagb:rgba(148,163,184,.35)}
+
+.lessons{list-style:none;display:flex;flex-direction:column;gap:10px}
+.lesson{position:relative;display:flex;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:13px 16px;box-shadow:var(--shadow);transition:transform .18s,opacity .3s}
+.lesson::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--tag,var(--accent))}
+.lesson:hover{transform:translateY(-1px)}
+.lesson.clickable{cursor:pointer}
+.lesson.past{opacity:.5}
+.lesson.now{border-color:var(--ok)}
+.lesson.win{background:transparent;border-style:dashed;box-shadow:none;opacity:.7}
+.lesson.win::before{display:none}
+.win-t{color:var(--text2);font-weight:600;font-size:14px}
+
+.l-slot{width:78px;flex-shrink:0;padding-top:1px}
+.l-no{font-size:19px;font-weight:800;color:var(--tag,var(--accent));line-height:1.2}
+.l-time2{font-size:11px;font-weight:700;color:var(--text2);font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+
+.lunch{display:flex;align-items:center;justify-content:center;gap:9px;padding:9px;background:var(--surface2);border-radius:12px;color:var(--text2);font-size:12.5px;font-weight:600;list-style:none}
+.lunch-t{font-variant-numeric:tabular-nums}
+
+.l-body{flex:1;min-width:0}
+.l-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.l-subject{font-weight:700;font-size:15.5px}
+.badge{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--tagbg,var(--surface2));color:var(--tag,var(--text2));border:1px solid var(--tagb,transparent)}
+.badge-now{background:var(--accent-soft)!important;color:var(--ok)!important;border-color:transparent!important;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.55}}
+.l-meta{display:flex;align-items:center;gap:6px;color:var(--text);font-size:13.5px;margin-top:4px}
+.l-meta .ic{flex-shrink:0;color:var(--tag,var(--accent))}
+.l-meta.link{cursor:pointer;border-radius:6px}
+.l-meta.link:hover span{color:var(--accent);text-decoration:underline dotted}
+.ic{stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.hw{margin-top:10px;background:var(--surface2);border-radius:10px;padding:8px 11px;display:flex;gap:9px;align-items:flex-start}
+.hw.empty{background:transparent;border:1.5px dashed var(--border);border-radius:10px;padding:7px 11px;cursor:pointer;color:var(--text2);font-size:13px;font-weight:500;align-items:center;transition:.18s;width:100%;text-align:left}
+.hw.empty:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.hw input[type=checkbox]{accent-color:var(--ok);width:16px;height:16px;margin-top:2px;cursor:pointer;flex-shrink:0}
+.hw-text{font-size:13.5px;line-height:1.5;flex:1;cursor:pointer;white-space:pre-wrap;word-break:break-word}
+.hw.done .hw-text{text-decoration:line-through;color:var(--text2)}
+
+.books{margin-top:8px;display:flex;gap:8px;align-items:center;width:100%;background:transparent;border:1.5px dashed var(--border);border-radius:10px;padding:7px 11px;color:var(--text2);font-size:13px;font-weight:500;cursor:pointer;text-align:left;transition:.18s}
+.books:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.books.has{border-style:solid;background:var(--surface2);border-color:var(--border);color:var(--text)}
+.books.has:hover{border-color:var(--accent)}
+.books .ic{flex-shrink:0;color:var(--tag,var(--accent))}
+.blist{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bcnt{flex-shrink:0;font-size:11.5px;font-weight:700;color:var(--tag,var(--accent));background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:1px 7px}
+
+.l-actions{display:none;flex-shrink:0;gap:6px;align-items:flex-start}
+body.editing .l-actions{display:flex}
+.minibtn{width:32px;height:32px;border-radius:9px;border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;cursor:pointer;color:var(--text2);transition:.15s}
+.minibtn:hover{color:var(--accent);border-color:var(--accent)}
+.minibtn.danger:hover{color:var(--danger);border-color:var(--danger)}
+
+.add-lesson{width:100%;padding:14px;border:1.5px dashed var(--border);border-radius:16px;background:transparent;color:var(--text2);font-weight:600;font-size:14px;cursor:pointer;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px;transition:.18s}
+.add-lesson:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+.overlay{position:fixed;inset:0;background:rgba(8,10,14,.55);backdrop-filter:blur(3px);display:grid;place-items:center;padding:16px;z-index:100;opacity:0;pointer-events:none;transition:.2s}
+.overlay.open{opacity:1;pointer-events:auto}
+.modal{width:100%;max-width:480px;background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:0 24px 64px -16px rgba(0,0,0,.4);transform:translateY(14px) scale(.98);transition:.22s;max-height:90vh;display:flex;flex-direction:column}
+.overlay.open .modal{transform:none}
+.modal.small{max-width:440px}
+.modal.mapm{max-width:98vw;width:98vw;height:96dvh;max-height:96dvh}
+.modal.mapm .m-body{flex:1;min-height:0;overflow:hidden;padding-bottom:14px}
+.m-head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 0}
+.m-head h3{font-size:17px;font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.m-body{padding:14px 20px 4px;overflow:auto;display:flex;flex-direction:column;gap:12px}
+.field label{display:block;font-size:12.5px;font-weight:600;color:var(--text2);margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--border);background:var(--bg);color:var(--text);border-radius:10px;padding:10px 12px;font:inherit;font-size:14px;transition:.15s;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.field textarea{min-height:96px;resize:vertical}
+.frow{display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+input.invalid{border-color:var(--danger)!important;box-shadow:0 0 0 3px rgba(220,61,67,.15)!important}
+.m-foot{display:flex;gap:10px;padding:12px 20px 18px;align-items:center}
+.m-foot .grow{flex:1}
+.btn{display:inline-block;border:none;border-radius:11px;padding:10px 18px;font-weight:600;font-size:14px;cursor:pointer;transition:.15s;white-space:nowrap;text-align:center;user-select:none}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{background:var(--surface2);color:var(--text)}
+.btn.ghost:hover{filter:brightness(.96)}
+.btn.danger{background:var(--danger);color:#fff}
+.btn.danger:hover{filter:brightness(1.08)}
+.btn.danger-ghost{background:transparent;color:var(--danger)}
+.btn.danger-ghost:hover{background:rgba(220,61,67,.1)}
+
+.checkrow{display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:10px;padding:11px 13px;font-size:14px;cursor:pointer;user-select:none;transition:.15s}
+.checkrow:hover{filter:brightness(.98)}
+.checkrow input{width:17px;height:17px;accent-color:var(--accent);flex-shrink:0;cursor:pointer}
+.checkrow .sub{display:block;font-size:12px;color:var(--text2);margin-top:1px}
+.mnote{font-size:13px;color:var(--text2);line-height:1.5}
+
+.filepick{width:100%;border:1.5px dashed var(--border);border-radius:12px;padding:12px;font:inherit;font-size:13.5px;color:var(--text2);background:var(--bg);cursor:pointer}
+.filepick:hover{border-color:var(--accent)}
+.filepick::file-selector-button{margin-right:12px;border:none;border-radius:9px;padding:8px 14px;background:var(--accent);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.filepick::file-selector-button:hover{filter:brightness(1.08)}
+.filepick::-webkit-file-upload-button{margin-right:12px;border:none;border-radius:9px;padding:8px 14px;background:var(--accent);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+
+.bklist{list-style:none;display:flex;flex-direction:column;gap:6px}
+.bklist li{display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:10px;padding:9px 12px;font-size:13.5px}
+.bklist li.muted{background:transparent;color:var(--text2);justify-content:center;font-weight:500}
+.bklist .bkname{flex:1;min-width:0;word-break:break-word;line-height:1.35}
+.bklist .bksize{flex-shrink:0;font-size:11.5px;color:var(--text2);font-variant-numeric:tabular-nums}
+.bklist .ic{flex-shrink:0;opacity:.7}
+.bklist .minibtn{width:28px;height:28px;border-radius:8px}
+.bknote{font-size:12px;color:var(--text2)}
+
+.cal-modal{max-width:420px}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-wd{text-align:center;font-size:11px;font-weight:700;color:var(--text2);padding:4px 0}
+.cal-day{position:relative;height:40px;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--text);font:inherit;font-size:13px;font-weight:600;cursor:pointer;font-variant-numeric:tabular-nums;transition:.12s}
+.cal-day:hover{background:var(--surface2)}
+.cal-day.out{opacity:.35}
+.cal-day.today{border-color:var(--accent);color:var(--accent)}
+.cal-day.sel{background:var(--accent);border-color:var(--accent);color:#fff}
+.cal-day.vac{background:rgba(245,158,11,.14);color:inherit}
+.cal-day.kd{background:rgba(139,92,246,.16);color:inherit}
+.cal-day.nos{opacity:.35;text-decoration:line-through}
+.cal-day .dot{position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:5px;height:5px;border-radius:50%;background:var(--hw)}
+.cal-legend{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;font-size:11.5px;color:var(--text2)}
+.cal-legend .lg{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.lg-today{border:1.5px solid var(--accent)}
+.lg-vac{background:rgba(245,158,11,.35)}
+.lg-kd{background:rgba(139,92,246,.35)}
+.lg-hw{background:var(--hw);border-radius:50%!important}
+
+#pdfUI{flex-direction:column;gap:10px;flex:1;min-height:0;display:flex}
+.pdfbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pdfbar .pname{font-size:12.5px;color:var(--text2);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:280px}
+.pdfbar .grow{flex:1}
+.pdfview{flex:1;min-height:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface2)}
+.pdfview iframe,.pdfview embed{width:100%;height:100%;border:0;display:block}
+.pdfzone{border:2px dashed var(--border);border-radius:14px;padding:26px 18px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:11px;transition:.18s}
+.pdfzone.drag{border-color:var(--accent);background:var(--accent-soft)}
+.pdfzone .pz-ic{font-size:34px;line-height:1}
+.pdfzone b{font-size:15px}
+.pdfzone p{color:var(--text2);font-size:13px;line-height:1.5;max-width:460px}
+.mapstatus{min-height:18px;font-size:13px;font-weight:600}
+.mapstatus.ok{color:var(--ok)}
+.mapstatus.err{color:var(--danger)}
+.mapstatus.busy{color:var(--accent)}
+.mapnotice{background:var(--accent-soft);color:var(--accent);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:500}
+#pdfHint{flex-shrink:0}
+@media(max-width:768px){
+  #mapOverlay{padding:0}
+  #mapOverlay .modal.mapm{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;border-radius:0;border:none}
+  #mapOverlay .m-head{padding:calc(env(safe-area-inset-top) + 10px) 14px 8px}
+  #mapOverlay .pdfbar,#mapOverlay #pdfHint{display:none!important}
+  #mapOverlay .m-body{padding:8px 10px 10px}
+}
+
+.howto-wrap{max-width:820px;margin:0 auto;padding:0 16px 6px}
+.howto{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow)}
+.howto-head{display:flex;gap:12px;align-items:flex-start}
+.howto-ic{font-size:24px;line-height:1.1}
+.howto-head b{display:block;font-size:15px}
+.howto-head p{color:var(--text2);font-size:13px;margin-top:2px;line-height:1.45}
+.howto-x{margin-left:auto;flex-shrink:0}
+.howto-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;padding-top:13px;border-top:1px solid var(--border)}
+@media(max-width:560px){.howto-cols{grid-template-columns:1fr}}
+.howto-col h4{font-size:13.5px;margin-bottom:7px}
+.howto-col ol{padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.howto-col li{font-size:13px;color:var(--text2);line-height:1.45}
+.howto-col li b{color:var(--text)}
+.howto-mini{display:block;margin:10px auto 0;padding:7px 14px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--text2);font-size:11.5px;font-weight:600;cursor:pointer;transition:.15s}
+.howto-mini:hover{color:var(--accent);border-color:var(--accent)}
+
+footer{max-width:820px;margin:20px auto 40px;padding:0 16px;color:var(--text2);font-size:12.5px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+footer button{background:none;border:none;color:var(--text2);cursor:pointer;font:inherit;font-size:12.5px;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+footer button:hover{color:var(--danger)}
+@media(max-width:560px){
+  footer{flex-direction:column;align-items:center;gap:8px;text-align:center}
+  footer button{font-size:13.5px;padding:8px 16px;border:1px solid var(--border);border-radius:12px;background:var(--surface);text-decoration:none;box-shadow:var(--shadow)}
+}
+
+@media(max-width:560px){
+  .frow{grid-template-columns:1fr}
+  .l-slot{width:62px}
+  .l-no{font-size:16px}
+  .day-head h1{font-size:22px}
+  .m-foot{flex-wrap:wrap}
+  .wlabel{min-width:0;flex:1;font-size:13px}
+  .arrow{width:38px;height:38px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="logo">ВМК</div>
+    <div class="brand-t"><b>Расписание</b><span>ВМК МГУ · 1 курс · 118 группа</span></div>
+    <div class="spacer"></div>
+    <div class="clockbox"><span class="cd" id="clockDate"></span><span class="ct" id="clockTime"></span></div>
+    <div class="hbtn"><button class="iconbtn syncbtn" id="syncBtn" title="Синхронизация"></button><span class="blabel">синхр.</span></div>
+    <div class="hbtn"><button class="iconbtn" id="mapBtn" title="Карты этажей"></button><span class="blabel">карта</span></div>
+    <div class="hbtn"><button class="iconbtn" id="editBtn" title="Режим редактирования"></button><span class="blabel" id="editLbl">пары</span></div>
+    <div class="hbtn"><button class="iconbtn" id="themeBtn" title="Светлая / тёмная тема"></button><span class="blabel">тема</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="semester">Осенний семестр 2026/2027 · расписание действует до 20 декабря</div>
+
+  <div class="weekbar">
+    <button class="arrow sm" id="wPrev" title="Предыдущая неделя"></button>
+    <button class="wlabel" id="wLabel" title="Открыть календарь — выбрать любую дату"></button>
+    <button class="arrow sm" id="wNext" title="Следующая неделя"></button>
+    <button class="wtoday" id="wToday" style="display:none">Сегодня</button>
+  </div>
+
+  <nav class="daynav">
+    <button class="arrow" id="prevBtn" title="Предыдущий день"></button>
+    <div class="tabs" id="tabs"></div>
+    <button class="arrow" id="nextBtn" title="Следующий день"></button>
+  </nav>
+
+  <section id="dayView">
+    <div class="day-head">
+      <h1 id="dayName"></h1>
+      <span class="day-date" id="dayDate"></span>
+      <span class="chip" id="todayChip">Сегодня</span>
+      <span class="day-meta" id="dayMeta"></span>
+    </div>
+    <div class="banner" id="banner" style="display:none"></div>
+    <div class="hint" id="editHint" style="display:none"></div>
+    <ul class="lessons" id="lessons"></ul>
+    <button class="add-lesson" id="addBtn" style="display:none"></button>
+  </section>
+</main>
+
+<div class="howto-wrap">
+  <section class="howto" id="howto">
+    <div class="howto-head">
+      <span class="howto-ic">📲</span>
+      <div>
+        <b>Добавь расписание на главный экран</b>
+        <p>Установи его как приложение — откроется без адресной строки, с иконкой на рабочем столе и будет работать даже без интернета.</p>
+      </div>
+      <button class="iconbtn sm howto-x" id="howtoHide" title="Скрыть инструкцию"></button>
+    </div>
+    <div class="howto-cols">
+      <div class="howto-col">
+        <h4>iPhone · Safari</h4>
+        <ol>
+          <li>Открой этот сайт в <b>Safari</b> (в Chrome этого пункта нет).</li>
+          <li>Нажми кнопку <b>«Поделиться»</b> — квадратик со стрелкой вверх.</li>
+          <li>В списке выбери <b>«На экран "Домой"»</b>.</li>
+          <li>Нажми <b>«Добавить»</b> — иконка появится на рабочем столе.</li>
+        </ol>
+      </div>
+      <div class="howto-col">
+        <h4>Android · Chrome</h4>
+        <ol>
+          <li>Открой этот сайт в <b>Chrome</b>.</li>
+          <li>Нажми меню <b>⋮</b> (три точки справа вверху).</li>
+          <li>Выбери <b>«Установить приложение»</b> или «Добавить на главный экран».</li>
+          <li>Подтверди установку — иконка появится в списке приложений.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <button class="howto-mini" id="howtoShow" style="display:none">инструкция</button>
+</div>
+
+<footer>
+  <span>ДЗ и файлы книг хранятся локально</span>
+  <button id="resetBtn">Сбросить всё</button>
+</footer>
+
+<!-- Модалка: пара -->
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="m-head">
+      <h3 id="mTitle">Редактировать пару</h3>
+      <button class="iconbtn sm" id="mClose"></button>
+    </div>
+    <div class="m-body">
+      <div class="frow">
+        <div class="field"><label for="fTime">Время</label><input id="fTime" list="times" placeholder="8:45 – 10:20"></div>
+        <div class="field"><label for="fType">Тип</label><select id="fType"></select></div>
+      </div>
+      <div class="field"><label for="fSubject">Предмет *</label><input id="fSubject" placeholder="Например, Математический анализ"></div>
+      <div class="field"><label for="fTeacher">Преподаватель</label><input id="fTeacher" placeholder="И. О. Фамилия"></div>
+      <div class="field"><label for="fRoom">Аудитория</label><input id="fRoom" placeholder="Например, 607 или П-6"></div>
+      <p class="mnote" id="syncNote">Изменения увидят все пользователи сайта.</p>
+    </div>
+    <div class="m-foot">
+      <button class="btn danger-ghost" id="mDelete">Удалить</button>
+      <div class="grow"></div>
+      <button class="btn ghost" id="mCancel">Отмена</button>
+      <button class="btn primary" id="mSave">Сохранить</button>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: ДЗ -->
+<div class="overlay" id="hwOverlay">
+  <div class="modal small" role="dialog" aria-modal="true">
+    <div class="m-head">
+      <h3 id="hwTitle">Домашнее задание</h3>
+      <button class="iconbtn sm" id="hwClose"></button>
+    </div>
+    <div class="m-body">
+      <div class="field">
+        <label for="hwInput" id="hwInputLabel">Что задали?</label>
+        <textarea id="hwInput" placeholder="Например: §4, задачи 12–18"></textarea>
+      </div>
+      <label class="checkrow"><input type="checkbox" id="hwDoneCheck"> <span>Выполнено<span class="sub">эта галочка видна только вам</span></span></label>
+    </div>
+    <div class="m-foot">
+      <button class="btn danger-ghost" id="hwDelete">Удалить ДЗ</button>
+      <div class="grow"></div>
+      <button class="btn ghost" id="hwCancel">Отмена</button>
+      <button class="btn primary" id="hwSave">Сохранить</button>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: книги -->
+<div class="overlay" id="booksOverlay">
+  <div class="modal small" role="dialog" aria-modal="true">
+    <div class="m-head">
+      <h3 id="bkTitle">Книги</h3>
+      <button class="iconbtn sm" id="bkClose"></button>
+    </div>
+    <div class="m-body">
+      <input type="file" id="bkFile" class="filepick" multiple>
+      <ul class="bklist" id="bkList"></ul>
+    </div>
+    <div class="m-foot">
+      <span class="bknote">Файлы до 1,5 МБ видны всем · крупные — только у автора</span>
+      <div class="grow"></div>
+      <button class="btn ghost" id="bkDone">Готово</button>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: сброс (только у себя) -->
+<div class="overlay" id="resetOverlay">
+  <div class="modal small" role="dialog" aria-modal="true">
+    <div class="m-head">
+      <h3>Сброс данных (у вас)</h3>
+      <button class="iconbtn sm" id="rsClose"></button>
+    </div>
+    <div class="m-body">
+      <p class="mnote">Сброс коснётся <b>только вашего устройства</b>. У других пользователей всё останется как было.</p>
+      <label class="checkrow"><input type="checkbox" id="rsHw" checked>
+        <span>Домашние задания<span class="sub">очистятся локально у вас</span></span></label>
+      <label class="checkrow"><input type="checkbox" id="rsBooks" checked>
+        <span>Книги<span class="sub">списки очистятся локально у вас</span></span></label>
+      <label class="checkrow"><input type="checkbox" id="rsSched" checked>
+        <span>Расписание<span class="sub">вернётся исходное расписание 118 группы — локально</span></span></label>
+      <label class="checkrow"><input type="checkbox" id="rsMap">
+        <span>PDF с картами этажей<span class="sub">придётся выбрать файл заново</span></span></label>
+    </div>
+    <div class="m-foot">
+      <div class="grow"></div>
+      <button class="btn ghost" id="rsCancel">Отмена</button>
+      <button class="btn danger" id="rsApply">Сбросить у себя</button>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: календарь -->
+<div class="overlay" id="calOverlay">
+  <div class="modal cal-modal" role="dialog" aria-modal="true">
+    <div class="m-head">
+      <h3 id="calTitle"></h3>
+      <button class="iconbtn sm" id="calClose"></button>
+    </div>
+    <div class="m-body">
+      <div class="cal-nav">
+        <button class="iconbtn sm" id="calPrev"></button>
+        <button class="wtoday" id="calToday">Сегодня</button>
+        <button class="iconbtn sm" id="calNext"></button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="cal-legend">
+        <span><i class="lg lg-today"></i>сегодня</span>
+        <span><i class="lg lg-vac"></i>каникулы</span>
+        <span><i class="lg lg-kd"></i>день знаний</span>
+        <span><i class="lg lg-hw"></i>есть ДЗ</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: карта этажей (встроенный PDF) -->
+<div class="overlay" id="mapOverlay">
+  <div class="modal mapm" role="dialog" aria-modal="true">
+    <div class="m-head">
+      <h3>Карты этажей</h3>
+      <button class="iconbtn sm" id="mapClose" title="Закрыть"></button>
+    </div>
+    <div class="m-body" id="mapBody">
+      <div id="mapNotice" class="mapnotice" style="display:none"></div>
+
+      <div id="pdfUI" style="display:none">
+        <div class="pdfbar">
+          <span class="pname" id="pdfName"></span>
+          <div class="grow"></div>
+          <button class="btn ghost" id="pdfFsBtn">На весь экран</button>
+          <button class="btn ghost" id="pdfNewTab">В новой вкладке</button>
+          <button class="btn ghost" id="pdfReplace">Заменить PDF</button>
+          <button class="btn danger-ghost" id="pdfRemove" style="display:none">Удалить</button>
+        </div>
+        <div class="pdfview"><iframe id="pdfFrame" title="Карты этажей"></iframe></div>
+        <p class="mnote" id="pdfHint">Планы 1, 2, 5, 6 и 7 этажей. Левая половина — Северная, правая — Южная.</p>
+      </div>
+
+      <div id="pdfZone" class="pdfzone" style="display:none">
+        <span class="pz-ic">🗺️</span>
+        <b>Подключите PDF с картами этажей</b>
+        <p><b>Способ 1:</b> положите PDF рядом с файлом сайта под именем <b>floors.pdf</b> и нажмите кнопку ниже (на GitHub Pages он подхватится сам).</p>
+        <button class="btn primary" id="pdfSibling">Открыть floors.pdf из папки сайта</button>
+        <p style="margin-top:6px"><b>Способ 2:</b> выберите PDF вручную — он один раз сохранится в браузере и дальше будет открываться здесь сам. Можно перетащить файл в это окно.</p>
+        <input type="file" id="mapPdfInput" class="filepick" style="max-width:360px">
+        <div class="mapstatus" id="mapStatus"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<datalist id="times">
+  <option value="8:45 – 10:20"></option>
+  <option value="10:30 – 12:05"></option>
+  <option value="12:50 – 14:25"></option>
+  <option value="14:35 – 16:10"></option>
+  <option value="16:20 – 17:55"></option>
+  <option value="9:00 – 10:30"></option>
+  <option value="15:10 – 18:50"></option>
+  <option value="16:50 – 18:20"></option>
+</datalist>
+
+<script>
+'use strict';
+const LS_KEY1='vmk118_schedule_v1', LS_KEY='vmk118_schedule_v3', LS_THEME='vmk118_theme';
+const FB_KEY='vmk118_file_fb', PDF_KEY='vmk118_floors_pdf', PDF_LS='vmk118_floors_pdf_ls', PDF_SIB='floors.pdf';
+const HOWTO_KEY='vmk118_howto', DONE_KEY='vmk118_done_v1', SYNC_PREF='vmk118_sync_on';
+const $=s=>document.querySelector(s);
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+const pad=n=>String(n).padStart(2,'0');
+
+/* Крестик/кнопка инструкции: делегированный обработчик — работает всегда */
+document.addEventListener('click',function(e){
+  if(!e.target||!e.target.closest)return;
+  const hideBtn=e.target.closest('#howtoHide');
+  const showBtn=e.target.closest('#howtoShow');
+  if(!hideBtn&&!showBtn)return;
+  const hidden=!!hideBtn;
+  try{localStorage.setItem(HOWTO_KEY,hidden?'hidden':'show');}catch(err){}
+  const card=document.getElementById('howto');
+  const mini=document.getElementById('howtoShow');
+  if(card)card.style.display=hidden?'none':'';
+  if(mini)mini.style.display=hidden?'':'none';
+});
+
+/* ══════════════ НАСТРОЙКА СИНХРОНИЗАЦИИ (Firebase) ══════════════ */
+const FIREBASE_CONFIG={
+  apiKey:"AIzaSyA6LVc7oR4OL9AMzIW11z9QCcCeb96O214",
+  authDomain:"vmk-118.firebaseapp.com",
+  databaseURL:"https://vmk-118-default-rtdb.firebaseio.com",
+  projectId:"VMK-118Е",
+  storageBucket:"vmk-118.firebasestorage.app",
+  messagingSenderId:"1078869177324",
+  appId:"1:1078869177324:web:33554cc8b15e3f5466c6c9"
+};
+const CLOUD_READY=!!(FIREBASE_CONFIG&&FIREBASE_CONFIG.databaseURL&&FIREBASE_CONFIG.databaseURL.indexOf('ВСТАВЬТЕ')===-1);
+/* выключатель синхронизации: запоминается у каждого пользователя */
+let syncPref=true;
+try{syncPref=localStorage.getItem(SYNC_PREF)!=='off';}catch(e){}
+const SYNC_ON=()=>CLOUD_READY&&syncPref;
+
+const TYPES=[
+  {k:'lec', label:'Лекция'},
+  {k:'sem', label:'Семинар'},
+  {k:'prac',label:'Практикум'},
+  {k:'pe',  label:'Физкультура'},
+  {k:'con', label:'Консультация'},
+  {k:'oth', label:'Другое'}
+];
+const typeLabel=k=>(TYPES.find(t=>t.k===k)||TYPES[5]).label;
+const hasKb=t=>t==='sem'||t==='prac';
+
+const DAYS=[
+  {key:'mon',name:'Понедельник',short:'Пн'},
+  {key:'tue',name:'Вторник',    short:'Вт'},
+  {key:'wed',name:'Среда',      short:'Ср'},
+  {key:'thu',name:'Четверг',    short:'Чт'},
+  {key:'fri',name:'Пятница',    short:'Пт'},
+  {key:'sat',name:'Суббота',    short:'Сб'},
+  {key:'sun',name:'Воскресенье',short:'Вс'}
+];
+const SLOTS={1:'8:45 – 10:20',2:'10:30 – 12:05',3:'12:50 – 14:25',4:'14:35 – 16:10',5:'16:20 – 17:55'};
+const MAX_SLOTS={mon:5,tue:5,wed:4,thu:5,fri:5,sat:5,sun:5};
+const LUNCH={start:'12:05',end:'12:50'};
+
+const MONTHS_G=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+const MONTHS_N=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+const WD_SHORT=['вс','пн','вт','ср','чт','пт','сб'];
+
+function L(time,subject,teacher,room,type){
+  return {id:uid(),time,subject,teacher:teacher||'',room:room||'',type:type||'oth'};
+}
+
+const DEFAULT_DAYS={
+  mon:[
+    L('12:50 – 14:25','Математический анализ','доц. Никитин Алексей Антонович','П-6','lec'),
+    L('14:35 – 16:10','Безопасность жизнедеятельности','Суслов Н.Н.','607','sem'),
+    L('16:50 – 18:20','Физическая культура','','','pe')
+  ],
+  tue:[
+    L('10:30 – 12:05','Математический анализ','Буничева А.Я.','606','sem'),
+    L('12:50 – 14:25','Алгебра и геометрия','доц. Панфёров Валерий Семёнович','П-5','lec'),
+    L('14:35 – 16:10','Английский язык','Потапова Н.М., Перцева З.Н.','785, 71','sem'),
+    L('16:20 – 17:55','Практикум на ЭВМ','Капитонова А.П., Пашков В.Н.','659, 515','prac')
+  ],
+  wed:[
+    L('8:45 – 10:20','Алгоритмы и алгоритмические языки','доц. Корухова Юлия Станиславовна','П-13','lec'),
+    L('10:30 – 12:05','Алгоритмы и алгоритмические языки','доц. Корухова Юлия Станиславовна','П-13','lec'),
+    L('12:50 – 14:25','Математический анализ','доц. Никитин Алексей Антонович','П-11','lec'),
+    L('15:10 – 18:50','Межфакультетские курсы','','','oth')
+  ],
+  thu:[
+    L('8:45 – 10:20','Алгебра и геометрия','Морозова В.А.','615','sem'),
+    L('10:30 – 12:05','История России','Меркулова Анастасия Михайловна','П-5','lec'),
+    L('12:50 – 14:25','Алгебра и геометрия','доц. Панфёров Валерий Семёнович','П-5','lec')
+  ],
+  fri:[
+    L('9:00 – 10:30','Физическая культура','','','pe'),
+    L('10:40 – 12:15','Практикум на ЭВМ','Капитонова А.П., Пашков В.Н.','659, 515','prac'),
+    L('12:50 – 14:25','Английский язык','Потапова Н.М., Перцева З.Н.','71, 582-а','sem'),
+    L('14:35 – 16:10','История России','Никитина А.А.','527','sem'),
+    L('16:20 – 17:55','Консультация. Практикум на ЭВМ','Капитонова А.П., Пашков В.Н.','659, 515','con')
+  ],
+  sat:[
+    L('8:45 – 10:20','Математический анализ','Буничева А.Я.','606','sem'),
+    L('10:30 – 12:05','Алгебра и геометрия','Морозова В.А.','624','sem')
+  ],
+  sun:[]
+};
+
+const ICONS={
+  user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/>',
+  pin:'<path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+  pencil:'<path d="M17 3a2.83 2.83 0 0 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>',
+  trash:'<path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M6 6l1 14a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-14"/>',
+  plus:'<path d="M12 5v14M5 12h14"/>',
+  sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  moon:'<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/>',
+  chevL:'<path d="M15 18l-6-6 6-6"/>',
+  chevR:'<path d="M9 18l6-6-6-6"/>',
+  cal:'<rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 9h18"/>',
+  map:'<path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/>',
+  book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
+  file:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/>',
+  download:'<path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/>',
+  sync:'<path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/>',
+  x:'<path d="M18 6L6 18M6 6l12 12"/>'
+};
+const ic=(n,s=16)=>`<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24">${ICONS[n]}</svg>`;
+
+/* ══════════════ КАРТА ЭТАЖЕЙ ══════════════ */
+const EMBEDDED_PDF='';
+const PDF_PAGE={1:2,2:3,5:4,6:5,7:6};
+
+let pdfBlobURL=null, mapTokens=[], memPdf=null, mapPage=null;
+let preCheckedSibling=null, preloadedPdfURL=null;
+
+function roomFloor(tok){
+  const t=(tok||'').replace(/\s+/g,'').toUpperCase();
+  let m;
+  if(t.indexOf('П-')===0||t.indexOf('P-')===0){
+    m=/^[ПP]-(\d+)/.exec(t);
+    if(!m)return null;
+    const n=+m[1];
+    if(n===3||n===4||n===5||n===6||n===13||n===14)return 1;
+    if(n===8||n===9||n===12)return 2;
+    return null;
+  }
+  if(t.indexOf('МЗ')===0||t.indexOf('M3')===0)return 1;
+  m=/^(\d{1,3})/.exec(t);
+  if(m){
+    const n=+m[1];
+    if(n>=500&&n<=599)return 5;
+    if(n>=600&&n<=699)return 6;
+    if(n>=700&&n<=799)return 7;
+    if(n>=60&&n<=69)return 6;
+    if(n>=70&&n<=79)return 7;
+  }
+  return null;
+}
+function floorFromTokens(tokens){
+  for(const t of tokens){const f=roomFloor(t);if(f)return f;}
+  return null;
+}
+
+function fileToBuf(file){
+  return new Promise((res,rej)=>{
+    const fr=new FileReader();
+    fr.onload=()=>res(fr.result); fr.onerror=()=>rej(fr.error);
+    fr.readAsArrayBuffer(file);
+  });
+}
+function fileToDataURL(file){
+  return new Promise((res,rej)=>{
+    const fr=new FileReader();
+    fr.onload=()=>res(fr.result); fr.onerror=()=>rej(fr.error);
+    fr.readAsDataURL(file);
+  });
+}
+function fmtBytes(n){return n<1048576?Math.round(n/1024)+' КБ':(n/1048576).toFixed(1)+' МБ';}
+function setMapStatus(text,cls){
+  const s=$('#mapStatus');
+  if(!s)return;
+  s.textContent=text||'';
+  s.className='mapstatus'+(cls?' '+cls:'');
+}
+function releasePdfURL(){
+  if(pdfBlobURL){URL.revokeObjectURL(pdfBlobURL);pdfBlobURL=null;}
+}
+async function getStoredPdf(){
+  try{
+    const rec=await idbGet(PDF_KEY);
+    if(rec&&rec.buf)return {buf:rec.buf,mime:rec.mime||'application/pdf',name:rec.name||'Карты этажей.pdf',persist:true};
+  }catch(e){}
+  try{
+    const raw=localStorage.getItem(PDF_LS);
+    if(raw){
+      const p=JSON.parse(raw);
+      if(p&&p.data)return {data:p.data,name:p.name||'Карты этажей.pdf',persist:true};
+    }
+  }catch(e){}
+  if(memPdf)return {buf:memPdf.buf,mime:memPdf.mime,name:memPdf.name,persist:false};
+  return null;
+}
+async function bufToURL(rec){
+  releasePdfURL();
+  if(rec.data){
+    try{
+      const blob=await (await fetch(rec.data)).blob();
+      pdfBlobURL=URL.createObjectURL(blob);
+      return pdfBlobURL;
+    }catch(e){}
+  }
+  if(rec.buf){
+    pdfBlobURL=URL.createObjectURL(new Blob([rec.buf],{type:rec.mime||'application/pdf'}));
+    return pdfBlobURL;
+  }
+  return null;
+}
+function showViewer(url,name,hint,pagenum){
+  let full=url;
+  if(pagenum)full=url+'#page='+pagenum;
+  $('#pdfFrame').src=full;
+  $('#pdfName').textContent=name;
+  $('#pdfHint').textContent=hint||'Планы 1, 2, 5, 6 и 7 этажей. Левая половина — Северная, правая — Южная.';
+  $('#pdfUI').style.display='flex';
+  $('#pdfZone').style.display='none';
+}
+function showZone(){
+  $('#pdfFrame').src='about:blank';
+  $('#pdfUI').style.display='none';
+  $('#pdfZone').style.display='flex';
+}
+async function trySiblingPdf(){
+  try{
+    const r=await fetch(PDF_SIB,{method:'HEAD'});
+    return r.ok;
+  }catch(e){ return false; }
+}
+async function loadMapUI(pagenum){
+  if(EMBEDDED_PDF&&EMBEDDED_PDF.length>100){
+    const url=await bufToURL({data:'data:application/pdf;base64,'+EMBEDDED_PDF});
+    if(url){
+      showViewer(url,'Карты этажей (встроены в сайт)','PDF зашит прямо в HTML — откроется у любого пользователя.',pagenum);
+      $('#pdfRemove').style.display='none';
+      showMapNotice(); return;
+    }
+  }
+  if(location.protocol==='http:'||location.protocol==='https:'){
+    if(await trySiblingPdf()){
+      releasePdfURL();
+      showViewer(PDF_SIB,'floors.pdf','Загружен с сервера — общий для всех посетителей сайта.',pagenum);
+      $('#pdfRemove').style.display='none';
+      showMapNotice(); return;
+    }
+  }
+  const rec=await getStoredPdf();
+  if(rec){
+    const url=await bufToURL(rec);
+    if(url){
+      showViewer(url,rec.name,rec.persist
+        ?'Файл сохранён в этом браузере и откроется здесь сам при каждом запуске.'
+        :'Файл сохранён только до перезагрузки страницы.',pagenum);
+      $('#pdfRemove').style.display=rec.persist?'':'none';
+      showMapNotice(); return;
+    }
+  }
+  $('#pdfRemove').style.display='none';
+  showZone(); setMapStatus('');
+  showMapNotice();
+}
+function showMapNotice(){
+  const n=$('#mapNotice');
+  if(mapTokens.length){
+    let msg='Ищем: '+mapTokens.join(', ');
+    const fl=floorFromTokens(mapTokens);
+    if(fl&&PDF_PAGE[fl])msg+=' · этаж '+fl+' — страница '+PDF_PAGE[fl];
+    else msg+=' · этаж не определён — посмотрите все страницы';
+    n.style.display='';
+    n.textContent=msg;
+  }else n.style.display='none';
+}
+async function saveMapPdf(file){
+  if(!file)return;
+  setMapStatus('Читаю файл «'+file.name+'» ('+fmtBytes(file.size)+')…','busy');
+  let buf=null;
+  try{ buf=await fileToBuf(file); }
+  catch(e){ setMapStatus('Не удалось прочитать файл: '+e.message,'err'); return; }
+  try{
+    await idbPut(PDF_KEY,{buf:buf,mime:'application/pdf',name:file.name});
+    try{localStorage.removeItem(PDF_LS);}catch(e){}
+    memPdf=null;
+    setMapStatus('Сохранено ✓ ('+fmtBytes(file.size)+')','ok');
+    await loadMapUI(mapPage);
+    return;
+  }catch(e){}
+  if(file.size<=3500000){
+    try{
+      const du=await fileToDataURL(file);
+      localStorage.setItem(PDF_LS,JSON.stringify({name:file.name,data:du}));
+      memPdf=null;
+      setMapStatus('Сохранено ✓ ('+fmtBytes(file.size)+')','ok');
+      await loadMapUI(mapPage);
+      return;
+    }catch(e){}
+  }
+  memPdf={buf:buf,mime:'application/pdf',name:file.name};
+  setMapStatus('Файл открыт, но браузер не дал сохранить его — планы будут работать до перезагрузки страницы.','ok');
+  await loadMapUI(mapPage);
+}
+function removeMapPdf(){
+  idbDel(PDF_KEY).catch(()=>{});
+  try{localStorage.removeItem(PDF_LS);}catch(e){}
+  memPdf=null;
+  releasePdfURL();
+  mapTokens=[];
+  preloadedPdfURL=null;
+  loadMapUI();
+}
+/* предзаготовка PDF для мгновенного открытия на телефоне */
+window.addEventListener('load',function(){
+  setTimeout(function(){
+    if(location.protocol==='http:'||location.protocol==='https:'){
+      fetch(PDF_SIB,{method:'HEAD'})
+        .then(r=>{preCheckedSibling=r.ok;})
+        .catch(()=>{preCheckedSibling=false;});
+    }else{
+      preCheckedSibling=false;
+    }
+    (async function(){
+      try{
+        const rec=await getStoredPdf();
+        if(rec)preloadedPdfURL=await bufToURL(rec);
+      }catch(e){}
+    })();
+  },300);
+});
+
+/* ══════════════ ДАТЫ/ПЕРИОДЫ ══════════════ */
+function mondayOf(off){
+  const d=new Date(); d.setHours(0,0,0,0);
+  d.setDate(d.getDate()-((d.getDay()+6)%7)+off*7);
+  return d;
+}
+function viewedDate(){
+  const d=mondayOf(weekOffset);
+  d.setDate(d.getDate()+dayIdx);
+  return d;
+}
+function dkey(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function fmtDate(d){return d.getDate()+' '+MONTHS_G[d.getMonth()];}
+function fmtWeekLabel(){
+  const m=mondayOf(weekOffset), s=new Date(m); s.setDate(s.getDate()+6);
+  const y=m.getFullYear();
+  return m.getMonth()===s.getMonth()
+    ? m.getDate()+' – '+s.getDate()+' '+MONTHS_G[m.getMonth()]+' '+y
+    : m.getDate()+' '+MONTHS_G[m.getMonth()]+' – '+s.getDate()+' '+MONTHS_G[s.getMonth()]+' '+y;
+}
+function periodOf(d){
+  const t=d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate();
+  if(t<20260801)  return 'none';
+  if(t<=20260831) return 'vacation';
+  if(t===20260901)return 'knowledge';
+  if(t<=20261220) return 'study';
+  return 'none';
+}
+const PERIODS={
+  vacation:{ic:'🏖',t:'Каникулы',d:'Расписания нет до 31 августа включительно. Учебный год начнётся 1 сентября, занятия — со 2 сентября.'},
+  knowledge:{ic:'🎓',t:'1 сентября — День знаний',d:'Расписание начнёт действовать со 2 сентября.'},
+  none:{ic:'📭',t:'Расписания ещё нет',d:'Действующее расписание — до 20 декабря включительно. Расписание на следующие даты появится позже.'}
+};
+
+function startMin(t){
+  const m=/^(\d{1,2})[:.](\d{2})/.exec((t||'').trim());
+  return m?(+m[1])*60+(+m[2]):-1;
+}
+function slotOf(t){
+  const m=startMin(t);
+  if(m<0)return null;
+  if(m<10*60+25)return 1;
+  if(m<12*60+30)return 2;
+  if(m<14*60+30)return 3;
+  if(m<16*60+15)return 4;
+  return 5;
+}
+
+/* ── Состояние ── */
+let weekOffset=0;
+let dayIdx=(new Date().getDay()+6)%7;
+let editing=false;
+let modal={open:false};
+let hwModal={open:false,lesson:null};
+let bk={key:null};
+let lastStatus='', lastTodayKey='';
+
+function normalize(arr){
+  if(!Array.isArray(arr)){
+    if(arr&&typeof arr==='object')arr=Object.keys(arr).map(k=>arr[k]);
+    else arr=[];
+  }
+  return arr.map(l=>({
+    id:l.id||uid(), time:l.time||'', subject:l.subject||'',
+    teacher:l.teacher||'', room:l.room||'', type:l.type||'oth'
+  }));
+}
+function normBooks(b){
+  const out={};
+  Object.keys(b||{}).forEach(k=>{
+    const arr=b[k]; if(!Array.isArray(arr))return;
+    out[k]=arr.map(x=>{
+      if(typeof x==='string')return {id:'b'+uid(),name:x,size:0,mime:''};
+      return {id:x.id||('b'+uid()),name:x.name||'Без названия',size:x.size||0,mime:x.mime||'',data:x.data||'',local:!!x.local};
+    });
+  });
+  return out;
+}
+function loadAll(){
+  try{
+    const raw=localStorage.getItem(LS_KEY);
+    if(raw){
+      const p=JSON.parse(raw), lessons={}, books=normBooks(p.books);
+      DAYS.forEach(x=>lessons[x.key]=normalize(p.lessons&&p.lessons[x.key]));
+      return {lessons,hw:p.hw||{},books};
+    }
+  }catch(e){}
+  try{
+    const raw=localStorage.getItem('vmk118_schedule_v2');
+    if(raw){
+      const p=JSON.parse(raw), lessons={}, hw={};
+      DAYS.forEach((x,i)=>{
+        lessons[x.key]=normalize(p.lessons&&p.lessons[x.key]);
+        const vd=mondayOf(0); vd.setDate(vd.getDate()+i); const k=dkey(vd);
+        const old=(p.lessons&&p.lessons[x.key])||[];
+        old.forEach((l,j)=>{
+          if(l&&l.hw&&String(l.hw).trim()&&lessons[x.key][j]){
+            hw[k]=hw[k]||{}; hw[k][lessons[x.key][j].id]={t:String(l.hw).trim(),d:!!l.hwDone};
+          }
+        });
+      });
+      const data={lessons,hw,books:{}}; persistAll(data); return data;
+    }
+  }catch(e){}
+  try{
+    const raw1=localStorage.getItem(LS_KEY1);
+    if(raw1){
+      const p=JSON.parse(raw1), lessons={}, hw={};
+      DAYS.forEach((x,i)=>{
+        lessons[x.key]=normalize(p[x.key]);
+        const vd=mondayOf(0); vd.setDate(vd.getDate()+i); const k=dkey(vd);
+        (p[x.key]||[]).forEach((l,j)=>{
+          if(l&&l.hw&&String(l.hw).trim()&&lessons[x.key][j]){
+            hw[k]=hw[k]||{}; hw[k][lessons[x.key][j].id]={t:String(l.hw).trim(),d:!!l.hwDone};
+          }
+        });
+      });
+      const data={lessons,hw,books:{}}; persistAll(data); return data;
+    }
+  }catch(e){}
+  return {lessons:JSON.parse(JSON.stringify(DEFAULT_DAYS)),hw:{},books:{}};
+}
+function persistAll(data){
+  data=data||{lessons:days,hw:hwShared,books:booksStore};
+  try{localStorage.setItem(LS_KEY,JSON.stringify(data));}catch(e){}
+}
+function persist(){persistAll();}
+
+const loaded=loadAll();
+let days=loaded.lessons, booksStore=loaded.books;
+/* ДЗ: текст — общий (hwShared), галочка «Выполнено» — личная (hwDoneLocal) */
+let hwShared={};
+let hwDoneLocal=(function(){
+  try{const v=JSON.parse(localStorage.getItem(DONE_KEY)||'{}');return v&&typeof v==='object'?v:{};}catch(e){return {};}
+})();
+(function splitHw(){
+  const src=loaded.hw||{};
+  Object.keys(src).forEach(k=>{
+    Object.keys(src[k]||{}).forEach(id=>{
+      const e=src[k][id]||{};
+      if(e.t){ hwShared[k]=hwShared[k]||{}; hwShared[k][id]={t:e.t}; }
+      if(e.d){ hwDoneLocal[k]=hwDoneLocal[k]||{}; hwDoneLocal[k][id]=true; }
+    });
+  });
+  try{localStorage.setItem(DONE_KEY,JSON.stringify(hwDoneLocal));}catch(e){}
+})();
+
+/* ── Локальное хранилище файлов книг ── */
+const IDB_NAME='vmk118_files', IDB_STORE='files';
+let idb=null;
+function idbOpen(){
+  return new Promise((res,rej)=>{
+    if(idb)return res(idb);
+    if(!window.indexedDB)return rej(new Error('no idb'));
+    const req=indexedDB.open(IDB_NAME,1);
+    req.onupgradeneeded=()=>{req.result.createObjectStore(IDB_STORE);};
+    req.onsuccess=()=>{idb=req.result;res(idb);};
+    req.onerror=()=>rej(req.error);
+    req.onblocked=()=>rej(new Error('blocked'));
+  });
+}
+function idbPut(key,val){
+  return idbOpen().then(db=>new Promise((res,rej)=>{
+    const tx=db.transaction(IDB_STORE,'readwrite');
+    tx.objectStore(IDB_STORE).put(val,key);
+    tx.oncomplete=()=>res(); tx.onerror=()=>rej(tx.error);
+  }));
+}
+function idbGet(key){
+  return idbOpen().then(db=>new Promise((res,rej)=>{
+    const rq=db.transaction(IDB_STORE,'readonly').objectStore(IDB_STORE).get(key);
+    rq.onsuccess=()=>res(rq.result); rq.onerror=()=>rej(rq.error);
+  }));
+}
+function idbDel(key){
+  return idbOpen().then(db=>new Promise((res,rej)=>{
+    const tx=db.transaction(IDB_STORE,'readwrite');
+    tx.objectStore(IDB_STORE).delete(key);
+    tx.oncomplete=()=>res(); tx.onerror=()=>rej(tx.error);
+  })).catch(()=>{});
+}
+const memFiles=new Map();
+
+async function saveFileBlob(m,file){
+  let buf=null;
+  try{ buf=await fileToBuf(file); }catch(e){ buf=null; }
+  if(buf){
+    try{
+      await idbPut(m.id,{buf:buf,mime:m.mime,name:m.name});
+      memFiles.delete(m.id);
+      return 'ok';
+    }catch(e){}
+    memFiles.set(m.id,{buf:buf,mime:m.mime});
+    return 'mem';
+  }
+  return false;
+}
+
+/* ── ДЗ: общий текст + личная галочка ── */
+function getHw(vd,id){
+  const k=dkey(vd);
+  const t=(hwShared[k]&&hwShared[k][id]&&hwShared[k][id].t)||'';
+  const d=!!(hwDoneLocal[k]&&hwDoneLocal[k][id]);
+  return {t,d};
+}
+function setHwText(vd,id,text){
+  const k=dkey(vd);
+  hwShared[k]=hwShared[k]||{};
+  if(text)hwShared[k][id]={t:text}; else delete hwShared[k][id];
+  if(hwShared[k]&&!Object.keys(hwShared[k]).length)delete hwShared[k];
+  if(SYNC_ON()&&fb){
+    const o={}; o[k+'/'+id]=text?{t:text}:null;
+    fb.ref('vmk118/hw').update(o);
+  }else persist();
+}
+function setHwDone(vd,id,done){
+  const k=dkey(vd);
+  hwDoneLocal[k]=hwDoneLocal[k]||{};
+  if(done)hwDoneLocal[k][id]=true; else delete hwDoneLocal[k][id];
+  try{localStorage.setItem(DONE_KEY,JSON.stringify(hwDoneLocal));}catch(e){}
+  renderDay();
+}
+function clearHwFor(id){
+  Object.keys(hwShared).forEach(k=>{
+    if(hwShared[k]&&hwShared[k][id])delete hwShared[k][id];
+    if(hwShared[k]&&!Object.keys(hwShared[k]).length)delete hwShared[k];
+  });
+  Object.keys(hwDoneLocal).forEach(k=>{ if(hwDoneLocal[k])delete hwDoneLocal[k][id]; });
+  try{localStorage.setItem(DONE_KEY,JSON.stringify(hwDoneLocal));}catch(e){}
+  if(SYNC_ON()&&fb){
+    fb.ref('vmk118/hw').once('value').then(s=>{
+      const all=s.val()||{}; const o={};
+      Object.keys(all).forEach(k=>{
+        if(all[k]&&all[k][id])o[k+'/'+id]=null;
+      });
+      if(Object.keys(o).length)fb.ref('vmk118/hw').update(o);
+    });
+  }else persist();
+}
+function hwCount(vd,key){
+  const k=dkey(vd), s=hwShared[k]; if(!s)return 0;
+  const dn=hwDoneLocal[k]||{};
+  return (days[key]||[]).filter(l=>s[l.id]&&s[l.id].t&&!dn[l.id]).length;
+}
+function dateHasHw(d){
+  const k=dkey(d), s=hwShared[k]; if(!s)return false;
+  const dn=hwDoneLocal[k]||{};
+  return Object.keys(s).some(id=>s[id]&&s[id].t&&!dn[id]);
+}
+
+/* ── Книги ── */
+function subjKey(s){
+  return (s||'').toLowerCase().replace(/ё/g,'е').replace(/\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();
+}
+function bookKeyOf(l){return subjKey(l.subject)+'|'+(l.type||'oth');}
+function pushBooks(key){
+  if(SYNC_ON()&&fb&&key){
+    fb.ref('vmk118/books/'+encodeURIComponent(key)).set(booksStore[key]||null);
+  }else persist();
+}
+(function migrateBooks(){
+  Object.keys(booksStore).forEach(k=>{
+    if(k.indexOf('|')!==-1)return;
+    const types=new Set();
+    DAYS.forEach(d=>(days[d.key]||[]).forEach(l=>{
+      if(subjKey(l.subject)===k)types.add(l.type||'oth');
+    }));
+    if(!types.size)types.add('oth');
+    types.forEach(t=>{
+      const nk=k+'|'+t;
+      if(!booksStore[nk])booksStore[nk]=booksStore[k].slice();
+    });
+    delete booksStore[k];
+  });
+  persist();
+})();
+function getBooks(key){return booksStore[key]||[];}
+function fmtSize(n){
+  if(!n)return '';
+  if(n<1024)return n+' Б';
+  if(n<1048576)return Math.round(n/1024)+' КБ';
+  return (n/1048576).toFixed(1)+' МБ';
+}
+
+function parseRange(t){
+  const m=/^(\d{1,2})[:.](\d{2})\s*[–—−-]\s*(\d{1,2})[:.](\d{2})$/.exec((t||'').trim());
+  if(!m)return null;
+  const s=(+m[1])*60+(+m[2]), e=(+m[3])*60+(+m[4]);
+  return (isNaN(s)||isNaN(e))?null:[s,e];
+}
+function plural(n,one,few,many){
+  const a=n%10,b=n%100;
+  if(a===1&&b!==11)return one;
+  if(a>=2&&a<=4&&(b<12||b>14))return few;
+  return many;
+}
+function parseRooms(str){
+  return (str||'').split(/[,;]+/).map(s=>s.trim()).filter(Boolean);
+}
+function anyOverlayOpen(){
+  return $('#overlay').classList.contains('open')||
+    $('#hwOverlay').classList.contains('open')||
+    $('#booksOverlay').classList.contains('open')||
+    $('#calOverlay').classList.contains('open')||
+    $('#mapOverlay').classList.contains('open')||
+    $('#resetOverlay').classList.contains('open');
+}
+
+/* ── Синхронизация: Firebase ── */
+let fb=null, fbListeners=[];
+function initSync(){
+  return new Promise((res)=>{
+    if(!CLOUD_READY){res(false);return;}
+    const s1=document.createElement('script');
+    s1.src='https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js';
+    s1.onload=()=>{
+      const s2=document.createElement('script');
+      s2.src='https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js';
+      s2.onload=()=>{
+        try{
+          firebase.initializeApp(FIREBASE_CONFIG);
+          fb=firebase.database();
+          res(true);
+        }catch(e){setSyncState('err');res(false);}
+      };
+      s2.onerror=()=>{setSyncState('err');res(false);};
+      document.head.appendChild(s2);
+    };
+    s1.onerror=()=>{setSyncState('err');res(false);};
+    document.head.appendChild(s1);
+  });
+}
+function applySchedule(v){
+  if(!v)return;
+  const d={};
+  DAYS.forEach(x=>d[x.key]=normalize(v[x.key]));
+  days=d;
+}
+function applyHw(v){
+  hwShared=v||{};
+}
+function applyBooks(v){
+  const out={};
+  Object.keys(v||{}).forEach(k=>{
+    try{out[decodeURIComponent(k)]=v[k];}catch(e){out[k]=v[k];}
+  });
+  booksStore=out;
+}
+/* включение синхронизации: подтягиваем облако и вешаем слушатели */
+async function syncStart(){
+  setSyncState('busy');
+  const ok=await initSync();
+  if(!ok)return;
+  try{
+    const snap=await fb.ref('vmk118').once('value');
+    if(snap.exists()){
+      const v=snap.val();
+      applySchedule(v.schedule);
+      applyHw(v.hw);
+      applyBooks(v.books);
+    }else{
+      /* в облаке пусто — заливаем текущее состояние этого устройства */
+      await fb.ref('vmk118').set({schedule:days,hw:hwShared,books:booksStore});
+    }
+    fbListeners=[];
+    const l1=fb.ref('vmk118/schedule').on('value',s=>{applySchedule(s.val());render();setSyncState('ok');},()=>setSyncState('err'));
+    const l2=fb.ref('vmk118/hw').on('value',s=>{applyHw(s.val());renderDay();renderTabs();});
+    const l3=fb.ref('vmk118/books').on('value',s=>{applyBooks(s.val());renderDay();});
+    fbListeners.push([fb.ref('vmk118/schedule'),'value',l1],[fb.ref('vmk118/hw'),'value',l2],[fb.ref('vmk118/books'),'value',l3]);
+    setSyncState('ok');
+  }catch(e){ setSyncState('err'); }
+}
+/* выключение: отписываемся, работаем локально */
+function syncStop(){
+  fbListeners.forEach(([ref,ev,cb])=>{try{ref.off(ev,cb);}catch(e){}});
+  fbListeners=[];
+  setSyncState('off');
+}
+function setSyncState(state){
+  const b=$('#syncBtn'); if(!b)return;
+  b.classList.toggle('on',state==='ok');
+  b.classList.toggle('off',state!=='ok');
+  b.title=state==='ok'?'Синхронизация включена — изменения видны всем (нажмите, чтобы отключить)'
+    :state==='busy'?'Синхронизация…'
+    :state==='err'?'Ошибка синхронизации (нажмите, чтобы попробовать снова)'
+    :(!CLOUD_READY?'Синхронизация не настроена — данные только в этом браузере':'Синхронизация выключена — данные только у вас (нажмите, чтобы включить)');
+}
+function updateSyncBtn(){
+  const b=$('#syncBtn'); if(!b)return;
+  b.innerHTML=ic('sync',18)+'<span class="flag"></span>';
+  b.classList.toggle('on',SYNC_ON()&&!!fb);
+  b.classList.toggle('off',!(SYNC_ON()&&!!fb));
+  if(!CLOUD_READY)setSyncState('off');
+  else if(SYNC_ON())setSyncState(fb?'ok':'off');
+  else setSyncState('off');
+  $('#syncNote').textContent=SYNC_ON()
+    ?'Изменения увидят все пользователи сайта.'
+    :'Синхронизация выключена — изменения только на этом устройстве.';
+}
+ $('#syncBtn').onclick=()=>{
+  if(!CLOUD_READY){
+    alert('Синхронизация ещё не настроена: в код сайта не вставлены ключи Firebase. Пока все данные хранятся только в этом браузере.');
+    return;
+  }
+  if(syncPref){
+    syncPref=false;
+    try{localStorage.setItem(SYNC_PREF,'off');}catch(e){}
+    syncStop();
+    updateSyncBtn();
+  }else{
+    syncPref=true;
+    try{localStorage.setItem(SYNC_PREF,'on');}catch(e){}
+    updateSyncBtn();
+    syncStart();
+  }
+};
+
+/* ── Рендер ── */
+function renderTabs(){
+  const c=$('#tabs'); c.innerHTML='';
+  const base=mondayOf(weekOffset), todayKey=dkey(new Date());
+  DAYS.forEach((d,i)=>{
+    const dt=new Date(base); dt.setDate(base.getDate()+i);
+    const b=document.createElement('button');
+    b.className='tab'+(i===dayIdx?' active':'')+(dkey(dt)===todayKey?' today':'');
+    if(periodOf(dt)==='study'&&hwCount(dt,d.key)){ b.insertAdjacentHTML('beforeend','<span class="hw-dot" title="Есть ДЗ"></span>'); b.title=d.name+', '+fmtDate(dt)+' — есть ДЗ'; }
+    else b.title=d.name+', '+fmtDate(dt);
+    b.insertAdjacentHTML('beforeend','<span class="tn">'+d.short+'</span><span class="td">'+dt.getDate()+'</span>');
+    b.onclick=()=>{ if(i!==dayIdx){dayIdx=i;render();} };
+    c.appendChild(b);
+  });
+}
+
+function metaRow(icon,text,kb){
+  const m=document.createElement('div'); m.className='l-meta';
+  m.innerHTML=ic(icon,15);
+  const s=document.createElement('span');
+  s.textContent=text+(kb?' кб.':'');
+  m.appendChild(s);
+  return m;
+}
+function miniBtn(icon,title,fn,extra){
+  const b=document.createElement('button');
+  b.className='minibtn'+(extra?' '+extra:''); b.title=title; b.innerHTML=ic(icon,15);
+  b.onclick=e=>{e.stopPropagation();fn();};
+  return b;
+}
+function hwEl(l,vd){
+  const h=getHw(vd,l.id);
+  if(!(h&&h.t)){
+    const b=document.createElement('button');
+    b.className='hw empty';
+    b.innerHTML=ic('plus',14)+'<span>Добавить ДЗ на '+fmtDate(vd)+'</span>';
+    b.onclick=e=>{e.stopPropagation();openHw(l);};
+    return b;
+  }
+  const d=document.createElement('div');
+  d.className='hw'+(h.d?' done':'');
+  const cb=document.createElement('input');
+  cb.type='checkbox'; cb.checked=!!h.d; cb.title='Отметить выполненным (видно только вам)';
+  cb.onclick=e=>e.stopPropagation();
+  cb.onchange=()=>{ setHwDone(vd,l.id,cb.checked); };
+  const tx=document.createElement('span');
+  tx.className='hw-text'; tx.textContent=h.t;
+  tx.title='Нажмите, чтобы изменить ДЗ';
+  tx.onclick=e=>{e.stopPropagation();openHw(l);};
+  d.appendChild(cb); d.appendChild(tx);
+  return d;
+}
+function booksEl(l){
+  const key=bookKeyOf(l), list=getBooks(key);
+  const b=document.createElement('button');
+  b.className='books'+(list.length?' has':'');
+  b.title=list.length?('Книги:\n'+list.map(x=>'• '+x.name).join('\n')):'Прикрепить файлы книг';
+  b.appendChild((()=>{const s=document.createElement('span');s.innerHTML=ic('book',15);return s.firstChild;})());
+  const txt=document.createElement('span'); txt.className='blist';
+  txt.textContent=list.length?list.map(x=>x.name).join(' · '):'Прикрепить книги';
+  b.appendChild(txt);
+  if(list.length){
+    const cnt=document.createElement('span'); cnt.className='bcnt';
+    cnt.textContent=list.length; b.appendChild(cnt);
+  }
+  b.onclick=e=>{e.stopPropagation();openBooks(key,l.subject,l.type);};
+  return b;
+}
+function slotHead(n,timeStr){
+  const d=document.createElement('div'); d.className='l-slot';
+  const no=document.createElement('div'); no.className='l-no'; no.textContent=String(n);
+  const tm=document.createElement('div'); tm.className='l-time2'; tm.textContent=timeStr;
+  d.appendChild(no); d.appendChild(tm);
+  return d;
+}
+function lessonEl(l,vd,curMin,isToday,n){
+  const li=document.createElement('li');
+  li.className='lesson t-'+(l.type||'oth');
+  if(isToday){
+    const r=parseRange(l.time);
+    if(r){ if(curMin>=r[1])li.classList.add('past'); else if(curMin>=r[0])li.classList.add('now'); }
+  }
+  li.appendChild(slotHead(n,l.time||SLOTS[n]));
+
+  const body=document.createElement('div'); body.className='l-body';
+  const top=document.createElement('div'); top.className='l-top';
+  const subj=document.createElement('span'); subj.className='l-subject';
+  subj.textContent=l.subject||'Без названия'; top.appendChild(subj);
+  const badge=document.createElement('span'); badge.className='badge';
+  badge.textContent=typeLabel(l.type); top.appendChild(badge);
+  if(li.classList.contains('now')){
+    const nb=document.createElement('span'); nb.className='badge badge-now';
+    nb.textContent='Сейчас'; top.appendChild(nb);
+  }
+  body.appendChild(top);
+  if(l.teacher)body.appendChild(metaRow('user',l.teacher));
+  if(l.room){
+    const rm=metaRow('pin',l.room,hasKb(l.type));
+    rm.classList.add('link');
+    rm.title='Показать на картах этажей';
+    rm.onclick=e=>{e.stopPropagation();openMap(parseRooms(l.room));};
+    body.appendChild(rm);
+  }
+  body.appendChild(hwEl(l,vd));
+  body.appendChild(booksEl(l));
+  li.appendChild(body);
+
+  const act=document.createElement('div'); act.className='l-actions';
+  act.appendChild(miniBtn('pencil','Редактировать',()=>openModal('edit',l.id)));
+  act.appendChild(miniBtn('trash','Удалить',()=>{
+    if(confirm('Удалить пару «'+(l.subject||'Без названия')+'»?')){
+      clearHwFor(l.id);
+      days[DAYS[dayIdx].key]=days[DAYS[dayIdx].key].filter(x=>x.id!==l.id);
+      if(SYNC_ON()&&fb)fb.ref('vmk118/schedule/'+DAYS[dayIdx].key).set(days[DAYS[dayIdx].key]);
+      else persist();
+      renderDay();
+    }
+  },'danger'));
+  li.appendChild(act);
+
+  if(editing){
+    li.classList.add('clickable');
+    li.addEventListener('click',e=>{
+      if(e.target.closest('.l-actions,.hw,.books,.l-meta.link'))return;
+      openModal('edit',l.id);
+    });
+  }
+  return li;
+}
+function windowEl(n){
+  const li=document.createElement('li');
+  li.className='lesson win';
+  li.appendChild(slotHead(n,SLOTS[n]));
+  const body=document.createElement('div'); body.className='l-body';
+  const t=document.createElement('span'); t.className='win-t'; t.textContent='Окно';
+  body.appendChild(t); li.appendChild(body);
+  return li;
+}
+function lunchEl(){
+  const li=document.createElement('li'); li.className='lunch';
+  li.innerHTML='<span>🍽</span><span>Обеденный перерыв</span><span class="lunch-t">'+LUNCH.start+' – '+LUNCH.end+'</span>';
+  return li;
+}
+function renderSlots(list,vd,curMin,isToday){
+  const ul=$('#lessons'); ul.innerHTML='';
+  const max=MAX_SLOTS[DAYS[dayIdx].key]||5;
+  for(let n=1;n<=max;n++){
+    if(n===3)ul.appendChild(lunchEl());
+    const inSlot=list.filter(l=>slotOf(l.time)===n).sort((a,b)=>startMin(a.time)-startMin(b.time));
+    if(!inSlot.length){ ul.appendChild(windowEl(n)); continue; }
+    inSlot.forEach(l=>ul.appendChild(lessonEl(l,vd,curMin,isToday,n)));
+  }
+  list.filter(l=>{const s=slotOf(l.time);return s&&s>max;})
+      .sort((a,b)=>startMin(a.time)-startMin(b.time))
+      .forEach(l=>ul.appendChild(lessonEl(l,vd,curMin,isToday,slotOf(l.time))));
+}
+
+function daySig(list,isToday){
+  const cm=isToday?(new Date().getHours()*60+new Date().getMinutes()):-1;
+  return list.map(l=>{
+    const r=parseRange(l.time);
+    if(!r||!isToday)return 'x';
+    return cm>=r[1]?'p':(cm>=r[0]?'n':'f');
+  }).join('');
+}
+
+function showBanner(cls,emoji,title,text){
+  const bn=$('#banner');
+  bn.style.display='';
+  bn.className='banner '+cls;
+  bn.innerHTML='<div class="b-ic">'+emoji+'</div><div><b></b><p></p></div>';
+  bn.querySelector('b').textContent=title;
+  bn.querySelector('p').textContent=text;
+}
+function hideBanner(){$('#banner').style.display='none';}
+
+function renderDay(dir){
+  const vd=viewedDate(), todayKey=dkey(new Date()), isToday=dkey(vd)===todayKey;
+  const per=periodOf(vd), key=DAYS[dayIdx].key, list=days[key]||[];
+
+  $('#dayName').textContent=DAYS[dayIdx].name;
+  $('#dayDate').textContent=fmtDate(vd);
+  $('#todayChip').style.display=isToday?'':'none';
+  $('#wLabel').textContent='';
+  $('#wLabel').insertAdjacentHTML('beforeend',ic('cal',15));
+  $('#wLabel').insertAdjacentText('beforeend',fmtWeekLabel());
+  $('#wToday').style.display=(weekOffset===0&&dayIdx===(new Date().getDay()+6)%7)?'none':'';
+
+  const hideAll=()=>{
+    $('#lessons').style.display='none';
+    $('#dayMeta').textContent='';
+    $('#addBtn').style.display='none';
+    $('#editHint').style.display='none';
+    document.body.classList.remove('editing');
+  };
+
+  if(per!=='study'){
+    const P=PERIODS[per];
+    showBanner(per==='vacation'?'vac':per==='knowledge'?'kd':'none',P.ic,P.t,P.d);
+    hideAll();
+  }else if(dayIdx===6&&list.length===0){
+    showBanner('off','😴','Выходной, пар нет','Отдыхайте и набирайтесь сил 🙂');
+    hideAll();
+  }else{
+    hideBanner();
+    $('#lessons').style.display='';
+    const curMin=isToday?(new Date().getHours()*60+new Date().getMinutes()):-1;
+    renderSlots(list,vd,curMin,isToday);
+    lastStatus=daySig(list,isToday);
+    const hwN=hwCount(vd,key);
+    const pw=plural(list.length,'пара','пары','пар');
+    $('#dayMeta').textContent=list.length?(list.length+' '+pw+(hwN?' · несделанных ДЗ: '+hwN:'')):'';
+    $('#addBtn').style.display=editing?'':'none';
+    $('#editHint').style.display=editing?'':'none';
+    document.body.classList.toggle('editing',editing);
+  }
+  lastTodayKey=todayKey;
+
+  if(dir){
+    const v=$('#dayView');
+    v.classList.remove('anim-r','anim-l'); void v.offsetWidth;
+    v.classList.add(dir>0?'anim-r':'anim-l');
+  }
+}
+function render(){renderTabs();renderDay();}
+
+function goDay(delta){
+  dayIdx+=delta;
+  if(dayIdx>6){dayIdx=0;weekOffset++;}
+  if(dayIdx<0){dayIdx=6;weekOffset--;}
+  render();
+}
+function goWeek(delta){weekOffset+=delta;render();}
+function goToday(){weekOffset=0;dayIdx=(new Date().getDay()+6)%7;render();}
+function gotoDate(d){
+  const mt=mondayOf(0);
+  const md=new Date(d); md.setHours(0,0,0,0); md.setDate(md.getDate()-((md.getDay()+6)%7));
+  weekOffset=Math.round((md-mt)/(7*86400000));
+  dayIdx=(d.getDay()+6)%7;
+  render();
+}
+
+/* ── Модалка пары ── */
+function openModal(mode,id){
+  modal={open:true,mode,id};
+  const l=mode==='edit'?days[DAYS[dayIdx].key].find(x=>x.id===id):null;
+  const vd=viewedDate();
+  $('#mTitle').textContent=mode==='add'?'Новая пара · '+DAYS[dayIdx].name+', '+fmtDate(vd):'Редактировать пару';
+  $('#fTime').value=l?l.time:'';
+  $('#fSubject').value=l?l.subject:'';
+  $('#fTeacher').value=l?l.teacher:'';
+  $('#fRoom').value=l?l.room:'';
+  $('#fType').value=l?(l.type||'oth'):'oth';
+  $('#mDelete').style.display=mode==='edit'?'':'none';
+  $('#overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>$('#fSubject').focus(),130);
+}
+function closeModal(){
+  modal={open:false};
+  $('#overlay').classList.remove('open');
+  unlockScroll();
+  $('#fSubject').classList.remove('invalid');
+}
+function saveModal(){
+  const subj=$('#fSubject').value.trim();
+  if(!subj){$('#fSubject').classList.add('invalid');$('#fSubject').focus();return;}
+  const data={
+    time:$('#fTime').value.trim(),
+    subject:subj,
+    teacher:$('#fTeacher').value.trim(),
+    room:$('#fRoom').value.trim(),
+    type:$('#fType').value
+  };
+  if(modal.mode==='add'){
+    days[DAYS[dayIdx].key].push(Object.assign({id:uid()},data));
+  }else{
+    const l=days[DAYS[dayIdx].key].find(x=>x.id===modal.id);
+    if(l)Object.assign(l,data);
+  }
+  if(SYNC_ON()&&fb)fb.ref('vmk118/schedule/'+DAYS[dayIdx].key).set(days[DAYS[dayIdx].key]);
+  else persist();
+  closeModal(); renderDay();
+}
+
+/* ── Модалка ДЗ ── */
+function openHw(l){
+  hwModal={open:true,lesson:l};
+  const vd=viewedDate();
+  $('#hwTitle').textContent='ДЗ · '+(l.subject||'—');
+  $('#hwInputLabel').textContent='Домашнее задание (на '+fmtDate(vd)+')';
+  const h=getHw(vd,l.id);
+  $('#hwInput').value=h?h.t:'';
+  $('#hwDoneCheck').checked=h?!!h.d:false;
+  $('#hwDelete').style.display=(h&&h.t)?'':'none';
+  $('#hwOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>$('#hwInput').focus(),130);
+}
+function closeHw(){
+  hwModal={open:false,lesson:null};
+  $('#hwOverlay').classList.remove('open');
+  unlockScroll();
+}
+function saveHw(){
+  if(!hwModal.lesson)return;
+  const text=$('#hwInput').value.trim(), done=$('#hwDoneCheck').checked;
+  setHwText(viewedDate(),hwModal.lesson.id,text);
+  setHwDone(viewedDate(),hwModal.lesson.id,done);
+  closeHw(); renderDay();
+}
+function deleteHw(){
+  if(!hwModal.lesson)return;
+  setHwText(viewedDate(),hwModal.lesson.id,'',false);
+  closeHw(); renderDay();
+}
+
+/* ── Модалка книг ── */
+function openBooks(key,subject,type){
+  bk={key};
+  $('#bkTitle').textContent='Книги · '+(subject||'—')+(type?' · '+typeLabel(type).toLowerCase():'');
+  renderBkList();
+  $('#booksOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeBooks(){
+  $('#booksOverlay').classList.remove('open');
+  unlockScroll();
+}
+function renderBkList(){
+  const ul=$('#bkList'); ul.innerHTML='';
+  const list=getBooks(bk.key);
+  if(!list.length){
+    const li=document.createElement('li'); li.className='muted';
+    li.textContent='Файлов пока нет — выберите файл выше';
+    ul.appendChild(li); return;
+  }
+  list.forEach((m,i)=>{
+    const li=document.createElement('li');
+    const fi=document.createElement('span'); fi.innerHTML=ic('file',17); li.appendChild(fi);
+    const nm=document.createElement('span'); nm.className='bkname'; nm.textContent=m.name+(m.local&&!m.data?' · только у автора':''); li.appendChild(nm);
+    const sz=document.createElement('span'); sz.className='bksize'; sz.textContent=fmtSize(m.size); li.appendChild(sz);
+    li.appendChild(miniBtn('download','Открыть',()=>openBook(m)));
+    li.appendChild(miniBtn('x','Удалить',()=>delBook(i),'danger'));
+    ul.appendChild(li);
+  });
+}
+ $('#bkFile').addEventListener('change',async()=>{
+  const inp=$('#bkFile');
+  const files=Array.from(inp.files||[]);
+  inp.value='';
+  if(!files.length||!bk.key)return;
+  let ok=0,fail=0,big=0;
+  for(const f of files){
+    const m={id:'b'+uid(),name:f.name,size:f.size,mime:f.type||'application/octet-stream'};
+    if(SYNC_ON()&&f.size<=1500000){
+      try{ m.data=await fileToDataURL(f); ok++; }
+      catch(e){ fail++; continue; }
+    }else{
+      const st=await saveFileBlob(m,f);
+      m.local=true;
+      if(SYNC_ON()&&f.size>1500000)big++;
+      if(st==='ok')ok++; else fail++;
+    }
+    (booksStore[bk.key]=booksStore[bk.key]||[]).push(m);
+  }
+  pushBooks(bk.key); renderBkList(); renderDay();
+  if(fail)alert('Не удалось добавить файлы ('+fail+' шт.).');
+  else if(big)alert('Файл(ы) крупнее 1,5 МБ сохранены только на этом устройстве — у остальных видно только название. Файлы до 1,5 МБ синхронизируются у всех.');
+});
+async function openBook(m){
+  let blob=null;
+  if(m.data){ try{ blob=await (await fetch(m.data)).blob(); }catch(e){} }
+  if(!blob){
+    try{
+      const rec=await idbGet(m.id);
+      if(rec&&rec.buf)blob=new Blob([rec.buf],{type:m.mime||'application/octet-stream'});
+    }catch(e){}
+  }
+  if(!blob&&memFiles.has(m.id)){
+    const rec=memFiles.get(m.id);
+    blob=new Blob([rec.buf],{type:rec.mime||'application/octet-stream'});
+  }
+  if(!blob){
+    alert('Файл недоступен на этом устройстве: он крупнее 1,5 МБ и хранится только у того, кто его прикрепил. Файлы до 1,5 МБ видны у всех.');
+    return;
+  }
+  const url=URL.createObjectURL(blob);
+  const w=window.open(url,'_blank');
+  if(!w){
+    const a=document.createElement('a'); a.href=url; a.download=m.name;
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+  setTimeout(()=>URL.revokeObjectURL(url),120000);
+}
+function delBook(i){
+  const arr=booksStore[bk.key]; if(!arr)return;
+  const m=arr[i]; arr.splice(i,1);
+  if(!arr.length)delete booksStore[bk.key];
+  if(m&&m.id)idbDel(m.id);
+  pushBooks(bk.key); renderBkList(); renderDay();
+}
+
+/* ── Сброс: ТОЛЬКО у себя ── */
+function openReset(){
+  $('#rsHw').checked=true; $('#rsBooks').checked=true; $('#rsSched').checked=true; $('#rsMap').checked=false;
+  $('#resetOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeReset(){
+  $('#resetOverlay').classList.remove('open');
+  unlockScroll();
+}
+function applyReset(){
+  const doHw=$('#rsHw').checked, doBooks=$('#rsBooks').checked, doSched=$('#rsSched').checked, doMap=$('#rsMap').checked;
+  if(!doHw&&!doBooks&&!doSched&&!doMap){closeReset();return;}
+  if(doSched)days=JSON.parse(JSON.stringify(DEFAULT_DAYS));
+  if(doHw){ hwShared={}; hwDoneLocal={}; try{localStorage.setItem(DONE_KEY,'{}');}catch(e){} }
+  if(doBooks){ booksStore={}; }
+  if(doMap){
+    idbDel(PDF_KEY).catch(()=>{});
+    try{localStorage.removeItem(PDF_LS);}catch(e){}
+    memPdf=null; releasePdfURL();
+    preloadedPdfURL=null;
+  }
+  /* важное: НЕ трогаем облако — только локальная копия этого устройства */
+  persist();
+  closeReset(); render();
+}
+
+/* ── Модалка календаря ── */
+let calY=2026,calM=8;
+function openCalendar(){
+  const vd=viewedDate();
+  calY=vd.getFullYear(); calM=vd.getMonth();
+  renderCal();
+  $('#calOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCal(){
+  $('#calOverlay').classList.remove('open');
+  unlockScroll();
+}
+function renderCal(){
+  $('#calTitle').textContent=MONTHS_N[calM]+' '+calY;
+  const grid=$('#calGrid'); grid.innerHTML='';
+  ['пн','вт','ср','чт','пт','сб','вс'].forEach(w=>{
+    const d=document.createElement('div'); d.className='cal-wd'; d.textContent=w; grid.appendChild(d);
+  });
+  const first=new Date(calY,calM,1);
+  const shift=(first.getDay()+6)%7;
+  const d0=new Date(calY,calM,1-shift);
+  const tk=dkey(new Date()), selKey=dkey(viewedDate());
+  for(let i=0;i<42;i++){
+    const cur=new Date(d0); cur.setDate(d0.getDate()+i);
+    const per=periodOf(cur), dk=dkey(cur);
+    const b=document.createElement('button');
+    b.className='cal-day'+(cur.getMonth()!==calM?' out':'')
+      +(per==='vacation'?' vac':'')+(per==='knowledge'?' kd':'')
+      +(per==='none'&&cur.getMonth()===calM?' nos':'')
+      +(dk===tk?' today':'')+(dk===selKey?' sel':'');
+    b.textContent=cur.getDate();
+    b.title=cur.getDate()+' '+MONTHS_G[cur.getMonth()]+' — открыть расписание';
+    if(per==='study'&&dateHasHw(cur))b.insertAdjacentHTML('beforeend','<span class="dot"></span>');
+    b.onclick=()=>{closeCal();gotoDate(cur);};
+    grid.appendChild(b);
+  }
+}
+
+/* ── Часы ── */
+function tickClock(){
+  const n=new Date();
+  $('#clockTime').textContent=pad(n.getHours())+':'+pad(n.getMinutes());
+  $('#clockDate').textContent=WD_SHORT[n.getDay()]+', '+n.getDate()+' '+MONTHS_G[n.getMonth()];
+}
+
+/* ── Тема ── */
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  $('#themeBtn').innerHTML=ic(t==='dark'?'sun':'moon',18);
+  try{localStorage.setItem(LS_THEME,t);}catch(e){}
+}
+function unlockScroll(){
+  if(!anyOverlayOpen())document.body.style.overflow='';
+}
+
+/* ── Инициализация ── */
+ $('#prevBtn').innerHTML=ic('chevL',20);
+ $('#nextBtn').innerHTML=ic('chevR',20);
+ $('#wPrev').innerHTML=ic('chevL',18);
+ $('#wNext').innerHTML=ic('chevR',18);
+ $('#calPrev').innerHTML=ic('chevL',16);
+ $('#calNext').innerHTML=ic('chevR',16);
+ $('#mapBtn').innerHTML=ic('map',18);
+ $('#editBtn').innerHTML=ic('pencil',18);
+ $('#syncBtn').innerHTML=ic('sync',18)+'<span class="flag"></span>';
+ $('#mClose').innerHTML=ic('x',16);
+ $('#hwClose').innerHTML=ic('x',16);
+ $('#bkClose').innerHTML=ic('x',16);
+ $('#rsClose').innerHTML=ic('x',16);
+ $('#calClose').innerHTML=ic('x',16);
+ $('#mapClose').innerHTML=ic('x',16);
+ $('#howtoHide').innerHTML=ic('x',14);
+ $('#addBtn').innerHTML=ic('plus',16)+'<span>Добавить пару</span>';
+ $('#editHint').innerHTML=ic('pencil',15)+'<span>Режим редактирования: нажмите на пару, чтобы изменить время, предмет, преподавателя или аудиторию. Номер пары (1–5) определяется по времени начала, пустые слоты — «окно». ДЗ — кнопкой «Добавить ДЗ».</span>';
+TYPES.forEach(t=>{const o=document.createElement('option');o.value=t.k;o.textContent=t.label;$('#fType').appendChild(o);});
+
+ $('#prevBtn').onclick=()=>goDay(-1);
+ $('#nextBtn').onclick=()=>goDay(1);
+ $('#wPrev').onclick=()=>goWeek(-1);
+ $('#wNext').onclick=()=>goWeek(1);
+ $('#wLabel').onclick=openCalendar;
+ $('#wToday').onclick=goToday;
+ $('#addBtn').onclick=()=>openModal('add');
+ $('#editBtn').onclick=()=>{editing=!editing;$('#editBtn').classList.toggle('active',editing);$('#editLbl').textContent=editing?'готово':'пары';renderDay();};
+
+ $('#mSave').onclick=saveModal;
+ $('#mCancel').onclick=closeModal;
+ $('#mClose').onclick=closeModal;
+ $('#mDelete').onclick=()=>{
+  const l=days[DAYS[dayIdx].key].find(x=>x.id===modal.id);
+  if(l&&confirm('Удалить пару «'+l.subject+'»?')){
+    clearHwFor(l.id);
+    days[DAYS[dayIdx].key]=days[DAYS[dayIdx].key].filter(x=>x.id!==l.id);
+    if(SYNC_ON()&&fb)fb.ref('vmk118/schedule/'+DAYS[dayIdx].key).set(days[DAYS[dayIdx].key]);
+    else persist();
+    renderDay();
+  }
+};
+ $('#overlay').addEventListener('click',e=>{if(e.target===$('#overlay'))closeModal();});
+ $('#fSubject').addEventListener('input',()=>$('#fSubject').classList.remove('invalid'));
+ $('#fSubject').addEventListener('keydown',e=>{if(e.key==='Enter')saveModal();});
+
+ $('#hwSave').onclick=saveHw;
+ $('#hwCancel').onclick=closeHw;
+ $('#hwClose').onclick=closeHw;
+ $('#hwDelete').onclick=deleteHw;
+ $('#hwOverlay').addEventListener('click',e=>{if(e.target===$('#hwOverlay'))closeHw();});
+
+ $('#bkDone').onclick=closeBooks;
+ $('#bkClose').onclick=closeBooks;
+ $('#booksOverlay').addEventListener('click',e=>{if(e.target===$('#booksOverlay'))closeBooks();});
+
+ $('#resetBtn').onclick=openReset;
+ $('#rsApply').onclick=applyReset;
+ $('#rsCancel').onclick=closeReset;
+ $('#rsClose').onclick=closeReset;
+ $('#resetOverlay').addEventListener('click',e=>{if(e.target===$('#resetOverlay'))closeReset();});
+
+ $('#calClose').onclick=closeCal;
+ $('#calPrev').onclick=()=>{calM--;if(calM<0){calM=11;calY--;}renderCal();};
+ $('#calNext').onclick=()=>{calM++;if(calM>11){calM=0;calY++;}renderCal();};
+ $('#calToday').onclick=()=>{closeCal();goToday();};
+ $('#calOverlay').addEventListener('click',e=>{if(e.target===$('#calOverlay'))closeCal();});
+
+/* ── Карта ── */
+function navNewTab(url){
+  const a=document.createElement('a');
+  a.href=url;
+  a.target='_blank';
+  a.rel='noopener';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+function mobileUrlNow(){
+  if(preCheckedSibling===true)return PDF_SIB;
+  if(preloadedPdfURL)return preloadedPdfURL;
+  return null;
+}
+function openMapMobile(){
+  const url=mobileUrlNow();
+  if(url){
+    navNewTab(mapPage?url+'#page='+mapPage:url);
+    return;
+  }
+  let w=null;
+  try{ w=window.open('about:blank','_blank'); }catch(e){}
+  if(!w){
+    $('#mapOverlay').classList.add('open');
+    document.body.style.overflow='hidden';
+    loadMapUI(mapPage);
+    return;
+  }
+  (async()=>{
+    let src=null;
+    if(EMBEDDED_PDF&&EMBEDDED_PDF.length>100){
+      try{
+        const r=await fetch('data:application/pdf;base64,'+EMBEDDED_PDF);
+        if(r.ok){src=URL.createObjectURL(await r.blob());preloadedPdfURL=src;}
+      }catch(e){}
+    }
+    if(!src&&(location.protocol==='http:'||location.protocol==='https:')){
+      try{
+        const r=await fetch(PDF_SIB,{method:'HEAD'});
+        if(r.ok){preCheckedSibling=true;src=PDF_SIB;}
+        else preCheckedSibling=false;
+      }catch(e){preCheckedSibling=false;}
+    }
+    if(!src){
+      const rec=await getStoredPdf();
+      if(rec){
+        src=await bufToURL(rec);
+        if(src)preloadedPdfURL=src;
+      }
+    }
+    if(w&&!w.closed){
+      if(src)w.location=src+(mapPage?'#page='+mapPage:'');
+      else{
+        w.close();
+        $('#mapOverlay').classList.add('open');
+        document.body.style.overflow='hidden';
+        loadMapUI(mapPage);
+      }
+    }
+  })();
+}
+function openMap(tokens){
+  mapTokens=Array.isArray(tokens)?tokens:[];
+  const fl=floorFromTokens(mapTokens);
+  mapPage=fl?PDF_PAGE[fl]:null;
+  if(window.matchMedia('(max-width:768px)').matches){
+    openMapMobile();
+    return;
+  }
+  $('#mapOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  loadMapUI(mapPage);
+}
+function closeMap(){
+  $('#mapOverlay').classList.remove('open');
+  $('#pdfFrame').src='about:blank';
+  releasePdfURL();
+  unlockScroll();
+}
+ $('#mapBtn').onclick=()=>openMap([]);
+ $('#mapClose').onclick=closeMap;
+ $('#mapOverlay').addEventListener('click',e=>{if(e.target===$('#mapOverlay'))closeMap();});
+
+ $('#mapPdfInput').addEventListener('change',function(){
+  const f=this.files&&this.files[0];
+  this.value='';
+  if(!f){ setMapStatus('',''); return; }
+  saveMapPdf(f);
+});
+const mapBody=$('#mapBody');
+['dragenter','dragover'].forEach(ev=>mapBody.addEventListener(ev,e=>{e.preventDefault();$('#pdfZone').classList.add('drag');}));
+['dragleave','drop'].forEach(ev=>mapBody.addEventListener(ev,e=>{e.preventDefault();$('#pdfZone').classList.remove('drag');}));
+mapBody.addEventListener('drop',e=>{
+  const f=e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0];
+  if(f)saveMapPdf(f);
+});
+ $('#pdfSibling').onclick=()=>{
+  releasePdfURL();
+  showViewer(PDF_SIB,'floors.pdf (из папки сайта)',
+    'Если планы не открылись — файла floors.pdf нет рядом с сайтом. Либо используйте «Способ 2».',mapPage);
+  $('#pdfRemove').style.display='none';
+  showMapNotice();
+};
+ $('#pdfReplace').onclick=()=>{
+  releasePdfURL();
+  showZone();
+  setMapStatus('Выберите новый PDF — он заменит текущий','busy');
+};
+ $('#pdfRemove').onclick=()=>{
+  if(confirm('Удалить сохранённый PDF с картами?'))removeMapPdf();
+};
+ $('#pdfNewTab').onclick=()=>{
+  const src=$('#pdfFrame').getAttribute('src');
+  if(src&&src!=='about:blank')window.open(src,'_blank');
+};
+ $('#pdfFsBtn').onclick=()=>{
+  const el=document.documentElement;
+  try{
+    if(document.fullscreenElement)document.exitFullscreen();
+    else{
+      const fn=el.requestFullscreen||el.webkitRequestFullscreen;
+      if(fn)fn.call(el);
+    }
+  }catch(e){}
+};
+
+ $('#themeBtn').onclick=()=>applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    if($('#mapOverlay').classList.contains('open')){closeMap();return;}
+    if($('#resetOverlay').classList.contains('open')){closeReset();return;}
+    if($('#hwOverlay').classList.contains('open')){closeHw();return;}
+    if($('#booksOverlay').classList.contains('open')){closeBooks();return;}
+    if($('#calOverlay').classList.contains('open')){closeCal();return;}
+    if(modal.open){closeModal();return;}
+  }
+  if(anyOverlayOpen())return;
+  const tag=(e.target.tagName||'').toLowerCase();
+  if(tag==='input'||tag==='textarea'||tag==='select')return;
+  if(e.key==='ArrowRight') e.shiftKey?goWeek(1):goDay(1);
+  else if(e.key==='ArrowLeft') e.shiftKey?goWeek(-1):goDay(-1);
+});
+
+/* ── Свайпы в стиле Telegram ── */
+(function(){
+  const strip=$('#tabs'); let on=false;
+  strip.addEventListener('touchstart',()=>{on=true;},{passive:true});
+  strip.addEventListener('touchmove',e=>{
+    if(!on)return;
+    const el=document.elementFromPoint(e.touches[0].clientX,e.touches[0].clientY);
+    const btn=el&&el.closest?el.closest('.tab'):null;
+    if(!btn)return;
+    const idx=Array.prototype.indexOf.call(strip.children,btn);
+    if(idx!==-1&&idx!==dayIdx){dayIdx=idx;render();}
+  },{passive:true});
+  strip.addEventListener('touchend',()=>{on=false;},{passive:true});
+  strip.addEventListener('touchcancel',()=>{on=false;},{passive:true});
+})();
+(function(){
+  const dv=$('#dayView'), strip=$('#tabs');
+  let sx=0,sy=0,on=false,lock=null,dx=0,curHint=null;
+  function clearHint(){
+    if(curHint){curHint.classList.remove('hint');curHint=null;}
+  }
+  function neighbor(dir){
+    let n=dayIdx+dir;
+    if(n>6)n=0; if(n<0)n=6;
+    return strip.children[n]||null;
+  }
+  dv.addEventListener('touchstart',e=>{
+    if(e.touches.length!==1)return;
+    sx=e.touches[0].clientX; sy=e.touches[0].clientY;
+    on=true; lock=null; dx=0; clearHint();
+  },{passive:true});
+  dv.addEventListener('touchmove',e=>{
+    if(!on||e.touches.length!==1)return;
+    const cx=e.touches[0].clientX-sx, cy=e.touches[0].clientY-sy;
+    if(lock===null){
+      if(Math.abs(cx)>12||Math.abs(cy)>12) lock=Math.abs(cx)>Math.abs(cy)?'h':'v';
+      else return;
+    }
+    if(lock!=='h')return;
+    e.preventDefault();
+    dx=cx;
+    dv.style.transition='none';
+    dv.style.transform='translateX('+(cx*0.5)+'px)';
+    dv.style.opacity=String(1-Math.min(0.25,Math.abs(cx)/600));
+    clearHint();
+    const dir=cx<0?1:-1;
+    if(Math.abs(cx)>45){
+      curHint=neighbor(dir);
+      if(curHint)curHint.classList.add('hint');
+    }
+  },{passive:false});
+  function finish(){
+    if(!on)return; on=false;
+    dv.style.transition='transform .22s cubic-bezier(.22,.8,.36,1), opacity .22s';
+    dv.style.transform=''; dv.style.opacity='';
+    const moved=Math.abs(dx)>70;
+    const dir=dx<0?1:-1;
+    clearHint();
+    if(moved){
+      dayIdx+=dir;
+      if(dayIdx>6){dayIdx=0;weekOffset++;}
+      if(dayIdx<0){dayIdx=6;weekOffset--;}
+      render();
+    }
+    setTimeout(()=>{dv.style.transition='';},240);
+  }
+  dv.addEventListener('touchend',finish,{passive:true});
+  dv.addEventListener('touchcancel',finish,{passive:true});
+})();
+
+tickClock();
+setInterval(tickClock,1000);
+setInterval(()=>{
+  if(anyOverlayOpen())return;
+  const tk=dkey(new Date());
+  if(tk!==lastTodayKey){render();return;}
+  const vd=viewedDate(), isToday=dkey(vd)===tk;
+  if(isToday&&periodOf(vd)==='study'&&weekOffset===0&&dayIdx===(new Date().getDay()+6)%7){
+    const s=daySig(days[DAYS[dayIdx].key]||[],true);
+    if(s!==lastStatus)renderDay(0);
+  }
+},30000);
+
+let th=null; try{th=localStorage.getItem(LS_THEME);}catch(e){}
+if(!th)th=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+applyTheme(th);
+render();
+if(SYNC_ON()){
+  setSyncState('busy');
+  syncStart();
+}
+updateSyncBtn();
+</script>
+</body>
+</html>
