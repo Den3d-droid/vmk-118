@@ -38,6 +38,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
 body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background .3s,color .3s}
 button{font-family:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -57,15 +58,24 @@ button{font-family:inherit}
 .iconbtn:hover{background:var(--surface2)}
 .iconbtn.active{background:var(--accent);border-color:var(--accent);color:#fff}
 .iconbtn.sm{width:34px;height:34px;border-radius:10px}
-/* кнопка-флажок синхронизации */
 .syncbtn{position:relative}
 .syncbtn .flag{position:absolute;top:-4px;right:-4px;width:14px;height:14px;border-radius:50%;border:2px solid var(--surface);background:#9aa2b1;transition:background .2s}
 .syncbtn.on .flag{background:var(--ok)}
-.syncbtn.off .flag{background:#9aa2b1}
 @media(max-width:680px){.brand-t span{display:none}}
 @media(max-width:768px){
   .topbar{backdrop-filter:blur(40px) saturate(230%);-webkit-backdrop-filter:blur(40px) saturate(230%)}
   .iconbtn{backdrop-filter:blur(26px) saturate(220%);-webkit-backdrop-filter:blur(26px) saturate(220%)}
+}
+@media(max-width:560px){
+  .topbar-in{gap:6px;height:58px;padding:0 2px}
+  .logo{width:34px;height:34px;border-radius:10px;font-size:11px}
+  .brand-t{display:none}
+  .clockbox{font-size:10.5px;gap:5px}
+  .clockbox .ct{font-size:12.5px}
+  .iconbtn{width:36px;height:36px;border-radius:10px}
+  .iconbtn.sm{width:30px;height:30px;border-radius:9px}
+  .blabel{font-size:8px}
+  .hbtn{gap:1px}
 }
 
 .semester{text-align:center;color:var(--text2);font-size:12.5px;font-weight:500;margin-top:18px}
@@ -116,8 +126,8 @@ button{font-family:inherit}
 
 .anim-r{animation:slideR .3s cubic-bezier(.22,.8,.36,1)}
 .anim-l{animation:slideL .3s cubic-bezier(.22,.8,.36,1)}
-@keyframes slideR{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:none}}
-@keyframes slideL{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
+@keyframes slideR{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+@keyframes slideL{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
 
 .t-lec {--tag:#6366f1;--tagbg:rgba(99,102,241,.13); --tagb:rgba(99,102,241,.3)}
 .t-sem {--tag:#0d9488;--tagbg:rgba(13,148,136,.13); --tagb:rgba(13,148,136,.3)}
@@ -270,7 +280,7 @@ input.invalid{border-color:var(--danger)!important;box-shadow:0 0 0 3px rgba(220
 .mapstatus.ok{color:var(--ok)}
 .mapstatus.err{color:var(--danger)}
 .mapstatus.busy{color:var(--accent)}
-.mapnotice{background:var(--accent-soft);color:var(--accent);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:500}
+.mapnotice{background:var(--accent-soft);color:var(--accent);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:500;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #pdfHint{flex-shrink:0}
 @media(max-width:768px){
   #mapOverlay{padding:0}
@@ -312,6 +322,8 @@ footer button:hover{color:var(--danger)}
   .m-foot{flex-wrap:wrap}
   .wlabel{min-width:0;flex:1;font-size:13px}
   .arrow{width:38px;height:38px}
+  .banner{padding:16px 14px}
+  .hw{padding:8px 9px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -320,7 +332,7 @@ footer button:hover{color:var(--danger)}
 
 <header class="topbar">
   <div class="wrap topbar-in">
-    <div class="logo">ВМК</div>
+    <div class="logo">118</div>
     <div class="brand-t"><b>Расписание</b><span>ВМК МГУ · 1 курс · 118 группа</span></div>
     <div class="spacer"></div>
     <div class="clockbox"><span class="cd" id="clockDate"></span><span class="ct" id="clockTime"></span></div>
@@ -574,6 +586,23 @@ const $=s=>document.querySelector(s);
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,8);
 const pad=n=>String(n).padStart(2,'0');
 
+/* ═══ ЗДЕСЬ подставьте значения из Firebase (Project settings → Your apps → Web) ═══ */
+const FIREBASE_CONFIG={
+  apiKey:"AIzaSyA6LVc7oR4OL9AMzIW11z9QCcCeb96O214",
+  authDomain:"vmk-118.firebaseapp.com",
+  databaseURL:"https://vmk-118-default-rtdb.firebaseio.com",
+  projectId:"VMK-118",
+  storageBucket:"vmk-118.firebasestorage.app",
+  messagingSenderId:"1078869177324",
+  appId:"1:1078869177324:web:33554cc8b15e3f5466c6c9"
+};
+/* ═══ выше — единственное место для правок ═══ */
+
+const CLOUD_READY=!!(FIREBASE_CONFIG&&FIREBASE_CONFIG.databaseURL&&FIREBASE_CONFIG.databaseURL.indexOf('[ЗДЕСЬ')===-1);
+let syncPref=true;
+try{syncPref=localStorage.getItem(SYNC_PREF)!=='off';}catch(e){}
+const SYNC_ON=()=>CLOUD_READY&&syncPref;
+
 /* Крестик/кнопка инструкции: делегированный обработчик — работает всегда */
 document.addEventListener('click',function(e){
   if(!e.target||!e.target.closest)return;
@@ -587,22 +616,6 @@ document.addEventListener('click',function(e){
   if(card)card.style.display=hidden?'none':'';
   if(mini)mini.style.display=hidden?'':'none';
 });
-
-/* ══════════════ НАСТРОЙКА СИНХРОНИЗАЦИИ (Firebase) ══════════════ */
-const FIREBASE_CONFIG={
-  apiKey:"AIzaSyA6LVc7oR4OL9AMzIW11z9QCcCeb96O214",
-  authDomain:"vmk-118.firebaseapp.com",
-  databaseURL:"https://vmk-118-default-rtdb.firebaseio.com",
-  projectId:"VMK-118Е",
-  storageBucket:"vmk-118.firebasestorage.app",
-  messagingSenderId:"1078869177324",
-  appId:"1:1078869177324:web:33554cc8b15e3f5466c6c9"
-};
-const CLOUD_READY=!!(FIREBASE_CONFIG&&FIREBASE_CONFIG.databaseURL&&FIREBASE_CONFIG.databaseURL.indexOf('ВСТАВЬТЕ')===-1);
-/* выключатель синхронизации: запоминается у каждого пользователя */
-let syncPref=true;
-try{syncPref=localStorage.getItem(SYNC_PREF)!=='off';}catch(e){}
-const SYNC_ON=()=>CLOUD_READY&&syncPref;
 
 const TYPES=[
   {k:'lec', label:'Лекция'},
@@ -882,7 +895,6 @@ function removeMapPdf(){
   preloadedPdfURL=null;
   loadMapUI();
 }
-/* предзаготовка PDF для мгновенного открытия на телефоне */
 window.addEventListener('load',function(){
   setTimeout(function(){
     if(location.protocol==='http:'||location.protocol==='https:'){
@@ -1031,7 +1043,6 @@ function persist(){persistAll();}
 
 const loaded=loadAll();
 let days=loaded.lessons, booksStore=loaded.books;
-/* ДЗ: текст — общий (hwShared), галочка «Выполнено» — личная (hwDoneLocal) */
 let hwShared={};
 let hwDoneLocal=(function(){
   try{const v=JSON.parse(localStorage.getItem(DONE_KEY)||'{}');return v&&typeof v==='object'?v:{};}catch(e){return {};}
@@ -1249,7 +1260,6 @@ function applyBooks(v){
   });
   booksStore=out;
 }
-/* включение синхронизации: подтягиваем облако и вешаем слушатели */
 async function syncStart(){
   setSyncState('busy');
   const ok=await initSync();
@@ -1262,7 +1272,6 @@ async function syncStart(){
       applyHw(v.hw);
       applyBooks(v.books);
     }else{
-      /* в облаке пусто — заливаем текущее состояние этого устройства */
       await fb.ref('vmk118').set({schedule:days,hw:hwShared,books:booksStore});
     }
     fbListeners=[];
@@ -1273,7 +1282,6 @@ async function syncStart(){
     setSyncState('ok');
   }catch(e){ setSyncState('err'); }
 }
-/* выключение: отписываемся, работаем локально */
 function syncStop(){
   fbListeners.forEach(([ref,ev,cb])=>{try{ref.off(ev,cb);}catch(e){}});
   fbListeners=[];
@@ -1302,7 +1310,7 @@ function updateSyncBtn(){
 }
  $('#syncBtn').onclick=()=>{
   if(!CLOUD_READY){
-    alert('Синхронизация ещё не настроена: в код сайта не вставлены ключи Firebase. Пока все данные хранятся только в этом браузере.');
+    alert('Синхронизация не подключена: значения Firebase не вставлены в код сайта.');
     return;
   }
   if(syncPref){
@@ -1743,7 +1751,6 @@ function applyReset(){
     memPdf=null; releasePdfURL();
     preloadedPdfURL=null;
   }
-  /* важное: НЕ трогаем облако — только локальная копия этого устройства */
   persist();
   closeReset(); render();
 }
@@ -2072,7 +2079,7 @@ document.addEventListener('keydown',e=>{
   function finish(){
     if(!on)return; on=false;
     dv.style.transition='transform .22s cubic-bezier(.22,.8,.36,1), opacity .22s';
-    dv.style.transform=''; dv.style.opacity='';
+    dv.style.transform='translateX(0)'; dv.style.opacity='';
     const moved=Math.abs(dx)>70;
     const dir=dx<0?1:-1;
     clearHint();
